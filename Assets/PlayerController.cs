@@ -3,8 +3,11 @@ using UnityEngine.Networking;
 
 public class PlayerController : NetworkBehaviour
 {
-    public GameObject bulletPrefab;
+	public GameObject bulletPrefab;
+	public GameObject specialBulletPrefab;
     public Transform bulletSpawn;
+	public float specialFireRate = 10;
+	private float nextFire;
 
     void Update()
     {
@@ -19,10 +22,19 @@ public class PlayerController : NetworkBehaviour
         transform.Rotate(0, x, 0);
         transform.Translate(0, 0, z);
 
+		//Espace
         if (Input.GetKeyDown(KeyCode.Space))
         {
             CmdFire();
         }
+
+		//C : Every 'specialFireRate' seconds (10 seconds by default)
+		if (Input.GetKeyDown(KeyCode.C) && Time.time > nextFire)
+		{
+			nextFire = Time.time + specialFireRate;
+			CmdSpecialFire();
+			Debug.Log("Firing once every 10s");
+		}
     }
 
     // This [Command] code is called on the Client …
@@ -45,6 +57,25 @@ public class PlayerController : NetworkBehaviour
         // Destroy the bullet after 2 seconds
         Destroy(bullet, 2.0f);
     }
+
+	[Command]
+	void CmdSpecialFire()
+	{
+		// Create the Bullet from the Bullet Prefab
+		var bullet = (GameObject)Instantiate(
+			specialBulletPrefab,
+			bulletSpawn.position,
+			bulletSpawn.rotation);
+
+		// Add velocity to the bullet
+		bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
+
+		// Spawn the bullet on the Clients
+		NetworkServer.Spawn(bullet);
+
+		// Destroy the bullet after 2 seconds
+		Destroy(bullet, 2.0f);
+	}
 
     public override void OnStartLocalPlayer()
     {

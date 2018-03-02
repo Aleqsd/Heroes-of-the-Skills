@@ -481,6 +481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5ac84f15f8972408d115d5b3c051cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyOnDeath: 0
   currentHealth: 100
   healthBar: {fileID: 224310301261252368}
 --- !u!114 &114904543215864752

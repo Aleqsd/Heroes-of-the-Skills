@@ -43,7 +43,7 @@ public class PlayerController : NetworkBehaviour
     void CmdFire()
     {
         // Create the Bullet from the Bullet Prefab
-        var bullet = (GameObject)Instantiate(
+        GameObject bullet = (GameObject)Instantiate(
             bulletPrefab,
             bulletSpawn.position,
             bulletSpawn.rotation);

@@ -46,6 +46,18 @@ public class Health : NetworkBehaviour
         }
     }
 
+    public void GetHealed(int amount)
+    {
+        if (!isServer)
+            return;
+
+        currentHealth += amount;
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
+
     void OnChangeHealth(int currentHealth)
     {
         healthBar.sizeDelta = new Vector2(currentHealth, healthBar.sizeDelta.y);

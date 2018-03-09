@@ -8,6 +8,8 @@ public class Health : NetworkBehaviour
 
     public const int maxHealth = 100;
     public bool destroyOnDeath;
+    public bool respawnOnDeath;
+    public GameObject EnemySpawner;
 
     [SyncVar(hook = "OnChangeHealth")]
     public int currentHealth = maxHealth;
@@ -35,6 +37,12 @@ public class Health : NetworkBehaviour
             if (destroyOnDeath)
             {
                 Destroy(gameObject);
+            }
+
+            if (respawnOnDeath)
+            {
+                Destroy(gameObject);
+                EnemySpawner.GetComponent<EnemySpawner>().SpawnEnemies(1);
             }
             else
             {

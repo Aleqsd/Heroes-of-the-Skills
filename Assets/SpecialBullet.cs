@@ -13,9 +13,6 @@ public class SpecialBullet : MonoBehaviour
 			health.TakeDamage(50);
 		}
 
-		if (collision.gameObject.name != "Gun" && collision.gameObject.name != "Bullet" && collision.gameObject.name != "SpecialBullet")
-		{
 			Destroy (gameObject);
-		}
 	}
 }

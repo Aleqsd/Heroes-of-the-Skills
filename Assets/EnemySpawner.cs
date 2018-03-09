@@ -9,7 +9,12 @@ public class EnemySpawner : NetworkBehaviour
 
     public override void OnStartServer()
     {
-        for (int i = 0; i < numberOfEnemies; i++)
+        SpawnEnemies(numberOfEnemies);
+    }
+
+    public void SpawnEnemies(int number)
+    {
+        for (int i = 0; i < number; i++)
         {
             var spawnPosition = new Vector3(
                 Random.Range(-8.0f, 8.0f),
@@ -23,6 +28,7 @@ public class EnemySpawner : NetworkBehaviour
 
             var enemy = (GameObject)Instantiate(enemyPrefab, spawnPosition, spawnRotation);
             NetworkServer.Spawn(enemy);
+            Debug.Log("spawn enemy at position : " + spawnPosition.ToString());
         }
     }
 }

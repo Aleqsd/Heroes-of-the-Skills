@@ -62,19 +62,19 @@ public class PlayerController : NetworkBehaviour
 	void CmdSpecialFire()
 	{
 		// Create the Bullet from the Bullet Prefab
-		var bullet = (GameObject)Instantiate(
+		var specialBullet = (GameObject)Instantiate(
 			specialBulletPrefab,
 			bulletSpawn.position,
 			bulletSpawn.rotation);
 
-		// Add velocity to the bullet
-		bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
+        // Add velocity to the bullet
+        specialBullet.GetComponent<Rigidbody>().velocity = specialBullet.transform.forward * 6;
 
 		// Spawn the bullet on the Clients
-		NetworkServer.Spawn(bullet);
+		NetworkServer.Spawn(specialBullet);
 
 		// Destroy the bullet after 2 seconds
-		Destroy(bullet, 2.0f);
+		Destroy(specialBullet, 2.0f);
 	}
 
     public override void OnStartLocalPlayer()

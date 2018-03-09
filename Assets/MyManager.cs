@@ -66,6 +66,7 @@ public class MyManager : NetworkManager
         GameObject playerPrefab = spawnPrefabs[id];
 
         GameObject player;
+        /*
         Transform startPos = GetStartPosition();
         if (startPos != null)
         {
@@ -74,7 +75,10 @@ public class MyManager : NetworkManager
         else
         {
             player = (GameObject)Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
-        }
+        }*/
+
+        player = (GameObject)Instantiate(playerPrefab, new Vector3(0, 1, 0), Quaternion.identity);
+
 
         NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
     }

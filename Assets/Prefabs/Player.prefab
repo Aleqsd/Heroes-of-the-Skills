@@ -144,7 +144,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1552292023715322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4319150361071194}
@@ -368,7 +368,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1705407429987246, guid: b43dfd909edf8ee4cb0cbef107bfd32c,
     type: 2}
+  specialBulletPrefab: {fileID: 1970601040429072, guid: fbc9e1435fccc4b5eb121073933e774c,
+    type: 2}
   bulletSpawn: {fileID: 4194448803211068}
+  specialFireRate: 10
 --- !u!114 &114600039066122750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -482,6 +485,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyOnDeath: 0
+  respawnOnDeath: 0
+  EnemySpawner: {fileID: 0}
   currentHealth: 100
   healthBar: {fileID: 224310301261252368}
 --- !u!114 &114904543215864752

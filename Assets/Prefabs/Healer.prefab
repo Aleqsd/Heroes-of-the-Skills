@@ -23,12 +23,13 @@ GameObject:
   - component: {fileID: 136346096681481846}
   - component: {fileID: 23924705846139542}
   - component: {fileID: 114144537134230986}
-  - component: {fileID: 114934287481220152}
   - component: {fileID: 114126241018489690}
   - component: {fileID: 114666627737001766}
+  - component: {fileID: 114533738045735034}
+  - component: {fileID: 54459436202928148}
   m_Layer: 0
   m_Name: Healer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -316,6 +317,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1060232746271902}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54459436202928148
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1060232746271902}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &65055769713459606
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -419,6 +435,23 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114533738045735034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1060232746271902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4e8f452afe1177458cb6ac685412944, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 1056628318058286, guid: e887e957e2b023d43a067071e27919b5,
+    type: 2}
+  specialBulletPrefab: {fileID: 1427033206730802, guid: d61b70098795df943a35ba582ed6faff,
+    type: 2}
+  bulletSpawn: {fileID: 4265289969687334}
+  specialFireRate: 10
 --- !u!114 &114666627737001766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -431,6 +464,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyOnDeath: 0
+  respawnOnDeath: 0
+  EnemySpawner: {fileID: 1856571069107466, guid: 32b64ff9adbd10e449d6100f01c2bfd6,
+    type: 2}
   currentHealth: 100
   healthBar: {fileID: 224649466584405564}
 --- !u!114 &114726135304542368
@@ -497,20 +533,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &114934287481220152
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1060232746271902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c0351f5e9974624cae057d1eb5d280e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1056628318058286, guid: e887e957e2b023d43a067071e27919b5,
-    type: 2}
-  bulletSpawn: {fileID: 4265289969687334}
 --- !u!136 &136178980980602800
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -19,7 +19,7 @@ namespace Heroes
         [HideInInspector] public BotAttack botAttack;
         [HideInInspector] public Health health;
         [HideInInspector] public BotMovement botMovement;
-        [HideInInspector] public Transform chaseTarget;
+        [HideInInspector] public Transform target;
         [HideInInspector] public float stateTimeElapsed;
 
         private bool aiActive;

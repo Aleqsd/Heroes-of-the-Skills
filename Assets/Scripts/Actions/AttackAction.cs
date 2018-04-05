@@ -17,16 +17,14 @@ namespace Heroes
         {
             RaycastHit hit;
 
-            Vector3 castOrigin = controller.eyes.position - controller.eyes.forward * controller.aiParameters.lookSphereCastRadius; // the origin of the spherecast need to start behind
-                                                                                                                                        // the gameobject
-            //Debug.Log("Origin : " + castOrigin.z);
+            Vector3 castOrigin = controller.eyes.position - controller.eyes.forward * controller.aiParameters.lookSphereCastRadius * 2; // more or less, depend the castradius 
+            // VERY IMPORTANT !!!! the origin of the spherecast need to start behind the gameobject or the IA won't attack
+
             Debug.DrawRay(castOrigin, controller.eyes.forward.normalized * controller.aiParameters.attackRange, Color.red);
 
             if (Physics.SphereCast(castOrigin, controller.aiParameters.lookSphereCastRadius, controller.eyes.forward, out hit, controller.aiParameters.attackRange, LayerMask.GetMask("Player","Nexus")))
             {
-                //StateController target = hit.rigidbody.GetComponent<StateController>();
-
-                //Debug.Log("Hit : "+hit);
+                //Debug.Log("hit");
                 controller.botAttack.Attack(controller.aiParameters.attackRate, hit);
             }
             else

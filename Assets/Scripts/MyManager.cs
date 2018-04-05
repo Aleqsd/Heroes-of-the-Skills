@@ -24,11 +24,13 @@ namespace Heroes
             Playing
         };
 
-
+        private List<GameObject> players;
+        private GameObject nexus;
         public GameObject[] aiPrefabs;                   // prefabs
         public AudioSource gameAudio;                   // The audio source to play.
         public AudioClip[] ambients;                      // Ambient audio
         [HideInInspector] public List<AiManager> bots;     // A collection of managers for enabling and disabling different aspects of the bots.
+
 
         public Text messageText;                  // Reference to the overlay Text to display winning text, etc.
         public Text scoreText;                  // Reference to the overlay score
@@ -60,6 +62,7 @@ namespace Heroes
             endWait = new WaitForSeconds(endDelay);
             spawnWait = new WaitForSeconds(spawnDelay);
 
+            players = new List<GameObject>();
 
             totalAi = 10;
 
@@ -94,6 +97,9 @@ namespace Heroes
                                                     // that didn't spawn yet, so we need an audio listener on game manager to
                                                     // hear start music
                                                     //PlayRandomAmbient();
+            Cursor.visible = false; // Needed after finishing game, the cursor need to be turned on again
+            Cursor.lockState = CursorLockMode.Confined;
+
             StartCoroutine(GameLoop());
         }
 
@@ -205,7 +211,7 @@ namespace Heroes
 
         private bool GameFinished()
         {
-            return CountBotInstances() == 0;//|| !player.instance; // All AIs are dead or player is dead
+            return players.Count == 0 || !nexus; // TODO : Handle victory, (all AIs are dead + ... ?)
         }
 
 
@@ -280,7 +286,7 @@ namespace Heroes
 
         public override void OnStartServer()
         {
-            
+            nexus = (GameObject)Instantiate(spawnPrefabs[7], new Vector3(0, 0.5f, 0), Quaternion.identity);
         }
 
         public override void OnClientConnect(NetworkConnection conn)
@@ -311,7 +317,6 @@ namespace Heroes
 
             GameObject playerPrefab = spawnPrefabs[id];
 
-            GameObject player;
             /*
             Transform startPos = GetStartPosition();
             if (startPos != null)
@@ -323,7 +328,8 @@ namespace Heroes
                 player = (GameObject)Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
             }*/
 
-            player = (GameObject)Instantiate(playerPrefab, new Vector3(0, 1, 0), Quaternion.identity);
+            GameObject player = (GameObject)Instantiate(playerPrefab, new Vector3(0, 1, 0), Quaternion.identity);
+            players.Add(player);
 
 
             NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);

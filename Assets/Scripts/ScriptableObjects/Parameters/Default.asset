@@ -11,9 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a07e8d71b4ff8fa44b630547eabf7010, type: 3}
   m_Name: Default
   m_EditorClassIdentifier: 
-  moveSpeed: 8
-  lookRange: 20
-  lookSphereCastRadius: 10
+  moveSpeed: 2
+  lookRange: 10
+  lookSphereCastRadius: 2
   attackRange: 5
   attackRate: 0.5
   attackForce: 15

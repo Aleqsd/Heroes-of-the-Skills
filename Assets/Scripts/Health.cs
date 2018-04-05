@@ -94,8 +94,8 @@ public class Health : NetworkBehaviour
 
     public void TakeDamage(int amount)
     {
-        if (!isServer)
-            return;
+        //if (!isServer)
+        //    return;
         
 
         currentHealth -= amount;
@@ -107,18 +107,18 @@ public class Health : NetworkBehaviour
             {
                 Destroy(gameObject);
             }
-
+            /*
             if (respawnOnDeath)
             {
                 Destroy(gameObject);
                 EnemySpawner.GetComponent<EnemySpawner>().SpawnEnemies(1);
-            }
+            }*/
             else
             {
                 currentHealth = maxHealth;
 
                 // called on the Server, invoked on the Clients
-                RpcRespawn();
+                // RpcRespawn();
             }
         }
 
@@ -128,8 +128,8 @@ public class Health : NetworkBehaviour
 
     public void GetHealed(int amount)
     {
-        if (!isServer)
-            return;
+        //if (!isServer)
+        //    return;
 
         currentHealth += amount;
         if (currentHealth > maxHealth)

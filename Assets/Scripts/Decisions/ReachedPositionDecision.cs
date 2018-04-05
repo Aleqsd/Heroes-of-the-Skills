@@ -18,7 +18,21 @@ namespace Heroes
 
         private bool ReachedPosition(StateController controller)
         {
-            return Vector3.Distance(Vector3.zero, controller.transform.position) < 5f;
+            bool reachedPosition = Vector3.Distance(Vector3.zero, controller.transform.position) < 5f;
+            
+            if (reachedPosition)
+            {
+                RaycastHit hit;
+                Vector3 castOrigin = controller.eyes.position - controller.eyes.forward * controller.aiParameters.lookSphereCastRadius * 3; // 5 more or less, depend the castradius 
+
+                // TODO : Change to overlapsphere (check all direction around)
+                if (Physics.SphereCast(castOrigin, controller.aiParameters.lookSphereCastRadius * 3, controller.eyes.forward, out hit, controller.aiParameters.lookRange, LayerMask.GetMask("Nexus")))
+                {
+                    controller.target = hit.transform;
+                    Debug.Log("target : " + controller.target);
+                }
+            }
+            return reachedPosition;
         }
     }
 }

@@ -28,7 +28,7 @@ namespace Heroes
             // TODO : Change to overlapsphere (check all direction around)
             if (Physics.SphereCast(controller.eyes.position, controller.aiParameters.lookSphereCastRadius, controller.eyes.forward, out hit, controller.aiParameters.lookRange, LayerMask.GetMask("Player")))
             {
-                controller.chaseTarget = hit.transform;
+                controller.target = hit.transform;
                 return true;
             }
             

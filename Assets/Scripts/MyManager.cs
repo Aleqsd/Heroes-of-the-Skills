@@ -130,7 +130,7 @@ namespace Heroes
 
                 AiManager bot = new AiManager
                 {
-                    instance = Instantiate(aiPrefabs[Random.Range(0, aiPrefabs.Length)], RandomCircle(Vector3.zero, Random.Range(50, 100)), new Quaternion(0, 0, 0, 0)) as GameObject // TODO : random circle spawn
+                    instance = Instantiate(aiPrefabs[Random.Range(0, aiPrefabs.Length)], RandomCircle(Vector3.zero, Random.Range(30, 60)), new Quaternion(0, 0, 0, 0)) as GameObject // TODO : random circle spawn
                 };
                 bot.SetupAI();
                 bots.Add(bot);

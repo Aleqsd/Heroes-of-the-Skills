@@ -14,7 +14,8 @@ namespace Heroes
 
         public void Attack(float attackRate, RaycastHit hit) // attackSpeed ?
         {
-            Health target = hit.rigidbody.GetComponent<Health>();
+            //Debug.Log("hit : " + hit.rigidbody);
+            Health target = hit.transform.GetComponent<Health>();
             // Debug.Log("BotAttack : " + Time.time + " | " + nextAttackTime + " | " + target);
             // Find the Health script associated with the rigidbody.
             if (target)

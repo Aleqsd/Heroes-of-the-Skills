@@ -8,6 +8,7 @@ public class PlayerController : NetworkBehaviour
     public Transform bulletSpawn;
 	public float specialFireRate = 10;
 	private float nextFire;
+    [HideInInspector] public Health health;
 
     void Update()
     {
@@ -80,5 +81,6 @@ public class PlayerController : NetworkBehaviour
     public override void OnStartLocalPlayer()
     {
         GetComponent<MeshRenderer>().material.color = Color.blue;
+        health = GetComponent<Health>();
     }
 }

@@ -1,9 +1,9 @@
 ToDo : (par priorités)
 
 Mécanisme d'attaque et de vie :
-  Tirer sur les monstres, le monstre meurt
-  Le monstre nous attaque, peut nous tuer
-  Doit marcher en multi
+  Tirer sur les monstres, le monstre meurt - fait
+  Le monstre nous attaque, peut nous tuer - fait
+  Doit marcher en multi - pas testé
   
 Map :
   Créer une map en croix, 4 waves, mettre un chateau au milieu ou quoi
@@ -17,3 +17,6 @@ Classes :
   Gérer les 4 classes (Wizard, Pretre, Archer, Ninja)
   Créer les 2 classes supplémentaires, mettre des projectiles fleches shuriken
   Penser à des attaques spéciales
+
+Boucle de jeu : 
+  Conditions de victoir / défaites etc ...

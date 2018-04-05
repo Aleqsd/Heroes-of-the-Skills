@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Default
   m_EditorClassIdentifier: 
   moveSpeed: 8
-  lookRange: 100
+  lookRange: 20
   lookSphereCastRadius: 10
   attackRange: 5
   attackRate: 0.5

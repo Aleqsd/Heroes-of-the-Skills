@@ -22,7 +22,7 @@ namespace Heroes
             //Debug.Log("Origin : " + castOrigin.z);
             Debug.DrawRay(castOrigin, controller.eyes.forward.normalized * controller.aiParameters.attackRange, Color.red);
 
-            if (Physics.SphereCast(castOrigin, controller.aiParameters.lookSphereCastRadius, controller.eyes.forward, out hit, controller.aiParameters.attackRange, LayerMask.GetMask("Player")))
+            if (Physics.SphereCast(castOrigin, controller.aiParameters.lookSphereCastRadius, controller.eyes.forward, out hit, controller.aiParameters.attackRange, LayerMask.GetMask("Player","Nexus")))
             {
                 //StateController target = hit.rigidbody.GetComponent<StateController>();
 

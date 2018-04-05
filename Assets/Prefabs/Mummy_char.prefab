@@ -934,9 +934,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1137689044326148}
-  m_LocalRotation: {x: -0, y: 0.9840856, z: -0, w: -0.17769514}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4609437882274528}
   - {fileID: 4759681219926106}
@@ -944,7 +944,7 @@ Transform:
   - {fileID: 4663940248086276}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 200.471, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4595530318706234
 Transform:
   m_ObjectHideFlags: 1
@@ -1512,7 +1512,7 @@ MonoBehaviour:
   eyes: {fileID: 4663940248086276}
   remainState: {fileID: 11400000, guid: dc918682a46bd004a9037795911c499e, type: 2}
   botAttack: {fileID: 0}
-  botHealth: {fileID: 0}
+  health: {fileID: 0}
   botMovement: {fileID: 0}
   chaseTarget: {fileID: 0}
   stateTimeElapsed: 0
@@ -1657,7 +1657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyOnDeath: 0
-  respawnOnDeath: 1
+  respawnOnDeath: 0
   EnemySpawner: {fileID: 1856571069107466, guid: 32b64ff9adbd10e449d6100f01c2bfd6,
     type: 2}
   currentHealth: 100
@@ -1751,7 +1751,7 @@ CapsuleCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1137689044326148}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 502295b35c48c3a429a499b8f12fca44, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5

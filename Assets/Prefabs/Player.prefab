@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 114067940198117796}
   - component: {fileID: 114727822114158412}
   - component: {fileID: 114864237690328682}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -372,6 +372,7 @@ MonoBehaviour:
     type: 2}
   bulletSpawn: {fileID: 4194448803211068}
   specialFireRate: 10
+  health: {fileID: 0}
 --- !u!114 &114600039066122750
 MonoBehaviour:
   m_ObjectHideFlags: 1

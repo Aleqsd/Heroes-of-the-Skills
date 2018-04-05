@@ -292,7 +292,6 @@ GameObject:
   - component: {fileID: 223785721010210182}
   - component: {fileID: 114459296482016298}
   - component: {fileID: 114334456740772450}
-  - component: {fileID: 114207905068036044}
   m_Layer: 5
   m_Name: Healthbar Canvas
   m_TagString: Untagged
@@ -1514,7 +1513,7 @@ MonoBehaviour:
   botAttack: {fileID: 0}
   health: {fileID: 0}
   botMovement: {fileID: 0}
-  chaseTarget: {fileID: 0}
+  target: {fileID: 0}
   stateTimeElapsed: 0
 --- !u!114 &114143254469219418
 MonoBehaviour:
@@ -1537,17 +1536,6 @@ MonoBehaviour:
     m_Bits: 256
   rb: {fileID: 54122287438232922}
   vSpeed: 0
---- !u!114 &114207905068036044
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1362143274093392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93adf40a3f06bcc439c0f295f81a52bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114270112497596922
 MonoBehaviour:
   m_ObjectHideFlags: 1

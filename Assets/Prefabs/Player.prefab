@@ -489,6 +489,12 @@ MonoBehaviour:
   EnemySpawner: {fileID: 0}
   currentHealth: 100
   healthBar: {fileID: 224310301261252368}
+  dead: 0
+  healthAudio: {fileID: 0}
+  gettingHit: {fileID: 0}
+  dying: {fileID: 0}
+  bloodPrefabs: []
+  bloodEffects: []
 --- !u!114 &114904543215864752
 MonoBehaviour:
   m_ObjectHideFlags: 1

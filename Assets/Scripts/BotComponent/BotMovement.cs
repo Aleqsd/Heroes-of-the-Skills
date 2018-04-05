@@ -15,6 +15,12 @@ namespace Heroes
         // TODO : array clip
         public AudioClip idling;            // Audio to play when the bot isn't moving.
         public AudioClip walking;           // Audio to play when the bot is moving.
+        private Animator anim;
+
+        private void Start()
+        {
+            anim = GetComponent<Animator>();
+        }
 
         private void Awake()
         {
@@ -71,6 +77,7 @@ namespace Heroes
             Audio();
             if (navMeshAgent.enabled)
                 navMeshAgent.destination = destination;
+            anim.SetBool("isRun",true);
         }
 
 

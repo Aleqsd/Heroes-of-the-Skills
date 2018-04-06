@@ -248,9 +248,11 @@ namespace Heroes
             do
             {
                 // ... return on the next frame.
+                if (GameFinished())
+                    yield break;
                 yield return StartCoroutine(SpawnAllAi());
 
-            } while (!RoundFinished() && !GameFinished());
+            } while (!RoundFinished());
         }
 
         private IEnumerator RoundEnding()

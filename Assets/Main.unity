@@ -410,22 +410,67 @@ Prefab:
     - target: {fileID: 224877695016075688, guid: eb9f6c4380dec974198f34638cae0036,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224877695016075688, guid: eb9f6c4380dec974198f34638cae0036,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224877695016075688, guid: eb9f6c4380dec974198f34638cae0036,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 256
+      value: -605
       objectReference: {fileID: 0}
     - target: {fileID: 224877695016075688, guid: eb9f6c4380dec974198f34638cae0036,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 256
+      value: -437
+      objectReference: {fileID: 0}
+    - target: {fileID: 114940675020359676, guid: eb9f6c4380dec974198f34638cae0036,
+        type: 2}
+      propertyPath: m_Text
+      value: Heroes of the skill
+      objectReference: {fileID: 0}
+    - target: {fileID: 114940675020359676, guid: eb9f6c4380dec974198f34638cae0036,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 114589606492827034, guid: eb9f6c4380dec974198f34638cae0036,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 114463390300729948, guid: eb9f6c4380dec974198f34638cae0036,
+        type: 2}
+      propertyPath: m_UVRect.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114463390300729948, guid: eb9f6c4380dec974198f34638cae0036,
+        type: 2}
+      propertyPath: m_UVRect.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114463390300729948, guid: eb9f6c4380dec974198f34638cae0036,
+        type: 2}
+      propertyPath: m_UVRect.width
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114463390300729948, guid: eb9f6c4380dec974198f34638cae0036,
+        type: 2}
+      propertyPath: m_UVRect.height
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224877695016075688, guid: eb9f6c4380dec974198f34638cae0036,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -430.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224877695016075688, guid: eb9f6c4380dec974198f34638cae0036,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -346.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb9f6c4380dec974198f34638cae0036, type: 2}

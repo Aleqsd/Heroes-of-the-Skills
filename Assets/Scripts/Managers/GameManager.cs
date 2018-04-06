@@ -16,8 +16,6 @@ namespace Heroes
 
         int avatarIndex = 0;
 
-        public Canvas characterSelectionCanvas;
-
         enum GameState
         {
             Won,
@@ -35,7 +33,9 @@ namespace Heroes
 
         public Text messageText;                  // Reference to the overlay Text to display winning text, etc.
         public Text scoreText;                  // Reference to the overlay score
-        public Button playButton;
+        public Button hostButton;
+        public Button joinButton;
+        public InputField ipAdress;
         public RawImage backgroundImage;
         public Texture[] backgroundTextures;
         private int indexTexture;
@@ -71,9 +71,9 @@ namespace Heroes
 
             indexTexture = 0;
             //InvokeRepeating("ChangeBackground", 0.04f, 0.04f);
-            playButton.onClick.AddListener(StartGame);
-
-            characterSelectionCanvas.enabled = true;
+            hostButton.onClick.AddListener(StartGame);
+            joinButton.onClick.AddListener(JoinGame);
+            
             player1Button.onClick.AddListener(delegate { AvatarPicker(player1Button.name); });
             player2Button.onClick.AddListener(delegate { AvatarPicker(player2Button.name); });
             
@@ -89,8 +89,11 @@ namespace Heroes
 
         void StartGame()
         {
-
-            Destroy(playButton.gameObject); // TODO : just hide button
+            Debug.Log("start");
+            NetworkManager.singleton.StartHost();
+            Destroy(hostButton.gameObject); // TODO : just hide button
+            Destroy(joinButton.gameObject); // TODO : just hide button
+            Destroy(ipAdress.gameObject);
             CancelInvoke("ChangeBackground");
             backgroundImage.enabled = false;
             Destroy(GetComponent<AudioListener>()); // During start screen there is no cameras because it's attached to the character
@@ -101,6 +104,29 @@ namespace Heroes
             Cursor.lockState = CursorLockMode.Confined;
 
             StartCoroutine(GameLoop());
+        }
+
+        void JoinGame()
+        {
+            Debug.Log("join");
+            NetworkManager.singleton.networkAddress = "127.0.0.1";
+                //ipAdress.transform.Find("Text").GetComponent<Text>().text == null ? "127.0.0.1" :
+                //ipAdress.transform.Find("Text").GetComponent<Text>().text;
+
+            NetworkManager.singleton.StartClient();
+            /*
+            Destroy(hostButton.gameObject); // TODO : just hide button
+            Destroy(joinButton.gameObject); // TODO : just hide button
+            CancelInvoke("ChangeBackground");
+            backgroundImage.enabled = false;
+            Destroy(GetComponent<AudioListener>()); // During start screen there is no cameras because it's attached to the character
+                                                    // that didn't spawn yet, so we need an audio listener on game manager to
+                                                    // hear start music
+                                                    //PlayRandomAmbient();
+            Cursor.visible = false; // Needed after finishing game, the cursor need to be turned on again
+            Cursor.lockState = CursorLockMode.Confined;
+            */
+            // StartCoroutine(GameLoop());
         }
 
         void PlayRandomAmbient()
@@ -331,11 +357,14 @@ namespace Heroes
         public override void OnStartServer()
         {
             nexus = (GameObject)Instantiate(spawnPrefabs[7], new Vector3(0, 0.5f, 0), Quaternion.identity);
+            NetworkServer.Spawn(nexus);
         }
 
         public override void OnClientConnect(NetworkConnection conn)
         {
-            characterSelectionCanvas.enabled = false;
+            GameObject.Find("GuiPanel").SetActive(false);
+            Destroy(backgroundImage.gameObject);
+
             IntegerMessage msg = new IntegerMessage(avatarIndex);
 
             if (!clientLoadedScene)

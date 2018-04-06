@@ -89,7 +89,6 @@ namespace Heroes
 
         void StartGame()
         {
-            Debug.Log("start");
             NetworkManager.singleton.StartHost();
             Destroy(hostButton.gameObject); // TODO : just hide button
             Destroy(joinButton.gameObject); // TODO : just hide button
@@ -108,24 +107,12 @@ namespace Heroes
 
         void JoinGame()
         {
-            Debug.Log("join");
             NetworkManager.singleton.networkAddress = "127.0.0.1";
-                //ipAdress.transform.Find("Text").GetComponent<Text>().text == null ? "127.0.0.1" :
+                //ipAdress.transform.Find("Text").GetComponent<Text>().text == "" ? "127.0.0.1" :
                 //ipAdress.transform.Find("Text").GetComponent<Text>().text;
 
             NetworkManager.singleton.StartClient();
-            /*
-            Destroy(hostButton.gameObject); // TODO : just hide button
-            Destroy(joinButton.gameObject); // TODO : just hide button
-            CancelInvoke("ChangeBackground");
-            backgroundImage.enabled = false;
-            Destroy(GetComponent<AudioListener>()); // During start screen there is no cameras because it's attached to the character
-                                                    // that didn't spawn yet, so we need an audio listener on game manager to
-                                                    // hear start music
-                                                    //PlayRandomAmbient();
-            Cursor.visible = false; // Needed after finishing game, the cursor need to be turned on again
-            Cursor.lockState = CursorLockMode.Confined;
-            */
+
             // StartCoroutine(GameLoop());
         }
 
@@ -150,32 +137,12 @@ namespace Heroes
         }
 
 
-        /**
-         * This function is used to spawn all AIs in a random circle around 0,0,0.
-         * The spawning doesn't stop until all AIs has spawned
-         */
-        public IEnumerator SpawnAllAi()
-        {
 
-            if (countAi < totalAi)
-            {
-
-                AiManager bot = new AiManager
-                {
-                    instance = Instantiate(aiPrefabs[Random.Range(0, aiPrefabs.Length)], RandomCircle(Vector3.zero, Random.Range(30, 60)), new Quaternion(0, 0, 0, 0)) as GameObject // TODO : random circle spawn
-                };
-                bot.SetupAI();
-                bots.Add(bot);
-                NetworkServer.Spawn(bot.instance);
-                countAi++;
-                yield return spawnWait;
-            }
-
-        }
 
         // This is called from start and will run each phase of the game one after another.
         private IEnumerator GameLoop()
         {
+
             // Start off by running the 'GameStarting' coroutine but don't return until it's finished.
             yield return StartCoroutine(GameStarting());
 
@@ -209,10 +176,18 @@ namespace Heroes
 
             countAi = 0;
             roundNumber = 0;
-            //player = playerPrefab.GetComponent<PlayerManager>();
-            //player.instance = Instantiate(playerPrefab, new Vector3(0, 1, 0), new Quaternion(0, 0, 0, 0));
-            // SpawnAllAi();
-            // DisableControl();
+
+            messageText.text = "Waiting more players ...";
+
+            // Wait other players
+            while (NetworkServer.connections.Count < 2)
+            {
+                //Debug.Log("Connections : " + NetworkServer.connections.Count);
+                //messageText.transform.Rotate(Vector3.one);
+                yield return null;
+                
+            }
+
             gameState = GameState.Playing;
             messageText.text = "Kill them all";
 
@@ -224,6 +199,10 @@ namespace Heroes
 
         private IEnumerator GamePlaying()
         {
+
+            nexus = (GameObject)Instantiate(spawnPrefabs[7], new Vector3(0, 0.5f, 0), Quaternion.identity);
+            NetworkServer.Spawn(nexus);
+
             while (true)
             {
                 // Start off by running the 'RoundStarting' coroutine but don't return until it's finished.
@@ -304,7 +283,28 @@ namespace Heroes
         }
 
 
+        /**
+ * This function is used to spawn all AIs in a random circle around 0,0,0.
+ * The spawning doesn't stop until all AIs has spawned
+ */
+        public IEnumerator SpawnAllAi()
+        {
 
+            if (countAi < totalAi)
+            {
+
+                AiManager bot = new AiManager
+                {
+                    instance = Instantiate(aiPrefabs[Random.Range(0, aiPrefabs.Length)], RandomCircle(Vector3.zero, Random.Range(30, 60)), new Quaternion(0, 0, 0, 0)) as GameObject // TODO : random circle spawn
+                };
+                bot.SetupAI();
+                bots.Add(bot);
+                NetworkServer.Spawn(bot.instance);
+                countAi++;
+                yield return spawnWait;
+            }
+
+        }
 
 
 
@@ -356,8 +356,7 @@ namespace Heroes
 
         public override void OnStartServer()
         {
-            nexus = (GameObject)Instantiate(spawnPrefabs[7], new Vector3(0, 0.5f, 0), Quaternion.identity);
-            NetworkServer.Spawn(nexus);
+
         }
 
         public override void OnClientConnect(NetworkConnection conn)
@@ -380,6 +379,7 @@ namespace Heroes
 
         public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId, NetworkReader extraMessageReader)
         {
+            
             int id = 0;
 
             if (extraMessageReader != null)

@@ -10,7 +10,7 @@ namespace Heroes
     {
         public override bool Decide(StateController controller)
         {
-            bool targetIsActive = !controller.target.GetComponent<Health>().dead;
+            bool targetIsActive = controller.target ? !controller.target.GetComponent<Health>().dead : false; // If target has been destroyed
             return targetIsActive;
         }
 

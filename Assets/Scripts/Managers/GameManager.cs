@@ -1,13 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEngine.Networking.NetworkSystem;
+using UnityEngine.SceneManagement;
 
 namespace Heroes
 {
-    public class GameManager : MonoBehaviour
+    public class GameManager : NetworkManager
     {
+
+        public Button player1Button;
+        public Button player2Button;
+
+        int avatarIndex = 0;
+
+        public Canvas characterSelectionCanvas;
+
         enum GameState
         {
             Won,
@@ -15,13 +25,13 @@ namespace Heroes
             Playing
         };
 
-        
+        private List<GameObject> players;
+        private GameObject nexus;
         public GameObject[] aiPrefabs;                   // prefabs
         public AudioSource gameAudio;                   // The audio source to play.
         public AudioClip[] ambients;                      // Ambient audio
-        public GameObject playerPrefab;
-        [HideInInspector]public List<AiManager> bots;     // A collection of managers for enabling and disabling different aspects of the bots.
-        //[HideInInspector]public PlayerManager player;
+        [HideInInspector] public List<AiManager> bots;     // A collection of managers for enabling and disabling different aspects of the bots.
+
 
         public Text messageText;                  // Reference to the overlay Text to display winning text, etc.
         public Text scoreText;                  // Reference to the overlay score
@@ -39,12 +49,11 @@ namespace Heroes
         private WaitForSeconds spawnWait;
         private int totalAi;                      // Total AIs that will spawn, changes per difficulty
         private int countAi;
-        private int totalWIns;                    // Used to increase difficulty every wins
+        private int roundNumber;
 
         // Use this for initialization
         void Start()
         {
-
             Cursor.visible = true; // Needed after finishing game, the cursor need to be turned on again
             Cursor.lockState = CursorLockMode.None;
 
@@ -53,18 +62,21 @@ namespace Heroes
             endWait = new WaitForSeconds(endDelay);
             spawnWait = new WaitForSeconds(spawnDelay);
 
+            players = new List<GameObject>();
 
             totalAi = 10;
 
             gameState = GameState.Playing;
 
-            
+
             indexTexture = 0;
             //InvokeRepeating("ChangeBackground", 0.04f, 0.04f);
             playButton.onClick.AddListener(StartGame);
-            
 
-            // TODO : put background screen
+            characterSelectionCanvas.enabled = true;
+            player1Button.onClick.AddListener(delegate { AvatarPicker(player1Button.name); });
+            player2Button.onClick.AddListener(delegate { AvatarPicker(player2Button.name); });
+            
         }
 
         void ChangeBackground()
@@ -77,14 +89,17 @@ namespace Heroes
 
         void StartGame()
         {
-        
+
             Destroy(playButton.gameObject); // TODO : just hide button
             CancelInvoke("ChangeBackground");
             backgroundImage.enabled = false;
             Destroy(GetComponent<AudioListener>()); // During start screen there is no cameras because it's attached to the character
                                                     // that didn't spawn yet, so we need an audio listener on game manager to
                                                     // hear start music
-            //PlayRandomAmbient();
+                                                    //PlayRandomAmbient();
+            Cursor.visible = false; // Needed after finishing game, the cursor need to be turned on again
+            Cursor.lockState = CursorLockMode.Confined;
+
             StartCoroutine(GameLoop());
         }
 
@@ -94,10 +109,10 @@ namespace Heroes
             gameAudio.Play();
             Invoke("PlayRandomAmbient", gameAudio.clip.length);
         }
-        
+
         /*
          * This function is used to calculate random points in a circle
-         */ 
+         */
         Vector3 RandomCircle(Vector3 center, float radius)
         {
             float ang = Random.value * 360;
@@ -115,33 +130,33 @@ namespace Heroes
          */
         public IEnumerator SpawnAllAi()
         {
-            
-            if(countAi < totalAi)
+
+            if (countAi < totalAi)
             {
-                
+
                 AiManager bot = new AiManager
                 {
-                    instance = Instantiate(aiPrefabs[Random.Range(0, aiPrefabs.Length)], RandomCircle(Vector3.zero, Random.Range(50, 100)), new Quaternion(0, 0, 0, 0)) as GameObject // TODO : random circle spawn
+                    instance = Instantiate(aiPrefabs[Random.Range(0, aiPrefabs.Length)], RandomCircle(Vector3.zero, Random.Range(30, 60)), new Quaternion(0, 0, 0, 0)) as GameObject // TODO : random circle spawn
                 };
                 bot.SetupAI();
                 bots.Add(bot);
-                
+                NetworkServer.Spawn(bot.instance);
                 countAi++;
                 yield return spawnWait;
             }
-            
+
         }
 
         // This is called from start and will run each phase of the game one after another.
         private IEnumerator GameLoop()
         {
-            // Start off by running the 'RoundStarting' coroutine but don't return until it's finished.
+            // Start off by running the 'GameStarting' coroutine but don't return until it's finished.
             yield return StartCoroutine(GameStarting());
 
-            // Once the 'RoundStarting' coroutine is finished, run the 'RoundPlaying' coroutine but don't return until it's finished.
+            // Once the 'GameStarting' coroutine is finished, run the 'RoundPlaying' coroutine but don't return until it's finished.
             yield return StartCoroutine(GamePlaying());
 
-            // Once execution has returned here, run the 'RoundEnding' coroutine, again don't return until it's finished.
+            // Once execution has returned here, run the 'GameEnding' coroutine, again don't return until it's finished.
             yield return StartCoroutine(GameEnding());
 
             // This code is not run until 'RoundEnding' has finished.  At which point, check if a game winner has been found.
@@ -165,13 +180,15 @@ namespace Heroes
 
         private IEnumerator GameStarting()
         {
+
             countAi = 0;
+            roundNumber = 0;
             //player = playerPrefab.GetComponent<PlayerManager>();
             //player.instance = Instantiate(playerPrefab, new Vector3(0, 1, 0), new Quaternion(0, 0, 0, 0));
-            SpawnAllAi();
+            // SpawnAllAi();
             // DisableControl();
             gameState = GameState.Playing;
-            messageText.text = "KILL THE NASTY COWS";
+            messageText.text = "Kill them all";
 
 
             // Wait for the specified length of time until yielding control back to the game loop.
@@ -181,45 +198,85 @@ namespace Heroes
 
         private IEnumerator GamePlaying()
         {
-            // As soon as the round begins
-            // EnableControl();
-
-            // Clear the text from the screen.
-            messageText.text = string.Empty;
-            
-            do
+            while (true)
             {
+                // Start off by running the 'RoundStarting' coroutine but don't return until it's finished.
+                yield return StartCoroutine(RoundStarting());
+
                 // ... return on the next frame.
-                yield return StartCoroutine(SpawnAllAi());
-            } while (!GameFinished()) ;
-        }
+                yield return StartCoroutine(RoundPlaying());
+                if (GameFinished())
+                    yield break;
 
-        private bool GameFinished()
-        {
-            return CountBotInstances() == 0;//|| !player.instance; // All AIs are dead or player is dead
+                yield return StartCoroutine(RoundEnding());
+            }
         }
-
 
         private IEnumerator GameEnding()
         {
             // Stop from moving.
             // DisableControl();
-
-            // If we killed all AI = won, else we lost
-            if (CountBotInstances() == 0)
-            {
-                messageText.text = "YOU WIN";
-                gameState = GameState.Won;
-            }
-            else
+            if (GameFinished() && !victory)
             {
                 messageText.text = "GAME OVER";
                 gameState = GameState.Lost;
+            }
+            if(victory)
+            {
+                messageText.text = "Win";
+                gameState = GameState.Won;
             }
 
             // Wait for the specified length of time until yielding control back to the game loop.
             yield return endWait;
         }
+
+        private IEnumerator RoundStarting() {
+
+            countAi = 0;
+            roundNumber++;
+            messageText.text = "Round starting";
+
+            yield return startWait;
+        }
+
+        private IEnumerator RoundPlaying()
+        {
+            // Clear the text from the screen.
+            messageText.text = string.Empty;
+
+            do
+            {
+                // ... return on the next frame.
+                yield return StartCoroutine(SpawnAllAi());
+
+            } while (!RoundFinished() && !GameFinished());
+        }
+
+        private IEnumerator RoundEnding()
+        {
+            messageText.text = "Round ending";
+            if (roundNumber == 1)
+                victory = true;
+
+            yield return startWait;
+        }
+
+
+        private bool RoundFinished()
+        {
+            return CountBotInstances() == 0; 
+        }
+
+        private bool victory = false;
+        private bool GameFinished()
+        {
+            Debug.Log("GameState : " + players.Count + " | " + nexus + " | " + victory);
+            return players.Count == 0 || !nexus || victory;
+        }
+
+
+
 
 
 
@@ -244,12 +301,80 @@ namespace Heroes
         private int CountBotInstances()
         {
             int count = 0;
-            for(int i = 0; i < bots.Count; i++)
+            for (int i = 0; i < bots.Count; i++)
             {
                 if (bots[i].instance) count++;
             }
             if (countAi > count) scoreText.text = "SCORE " + (countAi - count);
             return count;
+        }
+
+
+
+        void AvatarPicker(string buttonName)
+        {
+            switch (buttonName)
+            {
+                case "warrior_icon":
+                    avatarIndex = 0;
+                    break;
+                case "wizard_icon":
+                    avatarIndex = 1;
+                    break;
+            }
+
+            playerPrefab = spawnPrefabs[avatarIndex];
+        }
+
+        public override void OnStartServer()
+        {
+            nexus = (GameObject)Instantiate(spawnPrefabs[7], new Vector3(0, 0.5f, 0), Quaternion.identity);
+        }
+
+        public override void OnClientConnect(NetworkConnection conn)
+        {
+            characterSelectionCanvas.enabled = false;
+            IntegerMessage msg = new IntegerMessage(avatarIndex);
+
+            if (!clientLoadedScene)
+            {
+                ClientScene.Ready(conn);
+                if (autoCreatePlayer)
+                {
+                    ClientScene.AddPlayer(conn, 0, msg);
+                }
+            }
+
+        }
+
+        public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId, NetworkReader extraMessageReader)
+        {
+            int id = 0;
+
+            if (extraMessageReader != null)
+            {
+                IntegerMessage i = extraMessageReader.ReadMessage<IntegerMessage>();
+                id = i.value;
+            }
+
+            GameObject playerPrefab = spawnPrefabs[id];
+
+            /*
+            Transform startPos = GetStartPosition();
+            if (startPos != null)
+            {
+                player = (GameObject)Instantiate(playerPrefab, startPos.position, startPos.rotation);
+            }
+            else
+            {
+                player = (GameObject)Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
+            }*/
+
+            GameObject player = (GameObject)Instantiate(playerPrefab, new Vector3(0, 1, 0), Quaternion.identity);
+            players.Add(player);
+
+
+            NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
         }
     }
 }

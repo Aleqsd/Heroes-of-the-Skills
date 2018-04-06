@@ -16,7 +16,7 @@ namespace Heroes
         {
             //Debug.Log("hit : " + hit.rigidbody);
             Health target = hit.transform.GetComponent<Health>();
-            Debug.Log("BotAttack : " + Time.time + " | " + nextAttackTime + " | " + target);
+            //Debug.Log("BotAttack : " + Time.time + " | " + nextAttackTime + " | " + target);
             // Find the Health script associated with the rigidbody.
             if (target)
             {

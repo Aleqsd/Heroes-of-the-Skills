@@ -24,7 +24,7 @@ public class PlayerController : NetworkBehaviour
         transform.Translate(0, 0, z);
 
 		//Espace
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             CmdFire();
         }
@@ -50,7 +50,7 @@ public class PlayerController : NetworkBehaviour
             bulletSpawn.rotation);
 
         // Add velocity to the bullet
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 60;
 
         // Spawn the bullet on the Clients
         NetworkServer.Spawn(bullet);

@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class ThirdPersonCamera : MonoBehaviour
+public class ThirdPersonCamera : NetworkBehaviour
 {
     private const float Y_ANGLE_MIN = 0.0f;
     private const float Y_ANGLE_MAX = 50.0f;
@@ -21,8 +22,14 @@ public class ThirdPersonCamera : MonoBehaviour
         camTransform = transform;
     }
 
+    public void SetTarget(Transform target)
+    {
+        lookAt = target;
+    }
+
     private void Update()
     {
+
         currentX += Input.GetAxis("Mouse X") * sensitivityX;
         currentY -= Input.GetAxis("Mouse Y") * sensitivityY;
 

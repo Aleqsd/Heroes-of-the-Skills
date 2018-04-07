@@ -138,7 +138,7 @@ namespace Heroes
 
 
 
-
+        
         // This is called from start and will run each phase of the game one after another.
         private IEnumerator GameLoop()
         {
@@ -407,5 +407,6 @@ namespace Heroes
 
             NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
         }
+        
     }
 }

@@ -8,8 +8,9 @@ Multi :
   Boucle de jeu
   
 Graphisme :
-  Créer une map en croix, 4 waves, mettre un chateau au milieu ou quoi
-  La faire moche déjà, joli après
+  Intégrer une map
+  Travailler l'UI
+  Changer les personnages avec des assets
   
 Classes :
   Gérer les 4 classes (Wizard, Pretre, Archer, Ninja)

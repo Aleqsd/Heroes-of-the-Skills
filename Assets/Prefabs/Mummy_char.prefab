@@ -1676,7 +1676,7 @@ MonoBehaviour:
   bloodPrefabs:
   - {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 2}
   bloodEffects:
-  - {fileID: 1400662294947608, guid: 17be1a73d00b474429bd5753f7849ce9, type: 2}
+  - {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 2}
 --- !u!114 &114809452440088818
 MonoBehaviour:
   m_ObjectHideFlags: 1

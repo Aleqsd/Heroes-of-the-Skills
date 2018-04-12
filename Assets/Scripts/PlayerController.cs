@@ -33,7 +33,7 @@ public class PlayerController : NetworkBehaviour
         }
 
 		//C : Every 'specialFireRate' seconds (10 seconds by default)
-		if (Input.GetKeyDown(KeyCode.C) && Time.time > nextFire)
+		if (Input.GetKeyDown(KeyCode.Mouse1) && Time.time > nextFire)
 		{
 			nextFire = Time.time + specialFireRate;
 			CmdSpecialFire();

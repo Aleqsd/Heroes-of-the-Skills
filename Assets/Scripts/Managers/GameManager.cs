@@ -107,12 +107,15 @@ namespace Heroes
 
         void JoinGame()
         {
-            NetworkManager.singleton.networkAddress = "127.0.0.1";
-                //ipAdress.transform.Find("Text").GetComponent<Text>().text == "" ? "127.0.0.1" :
-                //ipAdress.transform.Find("Text").GetComponent<Text>().text;
+            Debug.Log("text : " + ipAdress.transform.Find("Text").GetComponent<Text>().text);
+
+            NetworkManager.singleton.networkAddress =
+                ipAdress.transform.Find("Text").GetComponent<Text>().text == "" ? "127.0.0.1" :
+                ipAdress.transform.Find("Text").GetComponent<Text>().text;
 
             NetworkManager.singleton.StartClient();
         }
+
 
         void PlayRandomAmbient()
         {
@@ -378,6 +381,13 @@ namespace Heroes
 
             NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
         }
-        
+
+        public override void OnClientDisconnect(NetworkConnection conn)
+        {
+            base.OnClientDisconnect(conn);
+            Debug.Log("Client disconnected");
+        }
+
+
     }
 }

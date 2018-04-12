@@ -29,7 +29,6 @@ public class ThirdPersonCamera : NetworkBehaviour
 
     private void Update()
     {
-
         currentX += Input.GetAxis("Mouse X") * sensitivityX;
         currentY -= Input.GetAxis("Mouse Y") * sensitivityY;
 

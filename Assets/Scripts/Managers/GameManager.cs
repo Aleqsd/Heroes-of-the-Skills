@@ -157,11 +157,11 @@ namespace Heroes
             {
                 case GameState.Won:
                     // If there is a game winner, restart the level.
-                    SceneManager.LoadScene(0);
+                    ServerChangeScene("Main");
                     break;
                 case GameState.Lost:
                     // If game is lost, restart the level.
-                    SceneManager.LoadScene(0);
+                    ServerChangeScene("Main");
                     break;
                 case GameState.Playing:
                     // If there isn't a winner yet, restart this coroutine so the loop continues.

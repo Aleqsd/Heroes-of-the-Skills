@@ -57,6 +57,8 @@ namespace Heroes
             Cursor.visible = true; // Needed after finishing game, the cursor need to be turned on again
             Cursor.lockState = CursorLockMode.None;
 
+            gameObject.AddComponent<AudioListener>();
+
             // Create the delays so they only have to be made once.
             startWait = new WaitForSeconds(startDelay);
             endWait = new WaitForSeconds(endDelay);

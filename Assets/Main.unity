@@ -874,7 +874,6 @@ GameObject:
   - component: {fileID: 1726739960}
   - component: {fileID: 1726739961}
   - component: {fileID: 1726739964}
-  - component: {fileID: 1726739963}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -1019,13 +1018,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1726739963
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1726739959}
-  m_Enabled: 1
 --- !u!82 &1726739964
 AudioSource:
   m_ObjectHideFlags: 0

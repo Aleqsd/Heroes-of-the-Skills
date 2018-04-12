@@ -156,10 +156,14 @@ namespace Heroes
                 case GameState.Won:
                     // If there is a game winner, restart the level.
                     ServerChangeScene("Main");
+                    //NetworkManager.singleton.StopHost();
+                    //NetworkManager.singleton.StopClient();
                     break;
                 case GameState.Lost:
                     // If game is lost, restart the level.
                     ServerChangeScene("Main");
+                    //NetworkManager.singleton.StopHost();
+                    //NetworkManager.singleton.StopClient();
                     break;
                 case GameState.Playing:
                     // If there isn't a winner yet, restart this coroutine so the loop continues.
@@ -274,15 +278,15 @@ namespace Heroes
         private bool victory = false;
         private bool GameFinished()
         {
-            Debug.Log("GameState : " + players.Count + " | " + nexus + " | " + victory);
+            // Debug.Log("GameState : " + players.Count + " | " + nexus + " | " + victory);
             return players.Count == 0 || !nexus || victory;
         }
 
 
         /**
- * This function is used to spawn all AIs in a random circle around 0,0,0.
- * The spawning doesn't stop until all AIs has spawned
- */
+         * This function is used to spawn all AIs in a random circle around 0,0,0.
+         * The spawning doesn't stop until all AIs has spawned
+         */
         public IEnumerator SpawnAllAi()
         {
 

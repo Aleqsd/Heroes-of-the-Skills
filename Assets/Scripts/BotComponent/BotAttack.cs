@@ -6,7 +6,6 @@ namespace Heroes
     public class BotAttack : MonoBehaviour
     {
         public int damage = 10;
-        private bool attacked;
         private float nextAttackTime; // kind of attack speed thing, useful
         public AudioSource attackAudio;               // The audio source to play.
         public AudioClip attack;            // Audio to play when the bot attack.
@@ -24,8 +23,7 @@ namespace Heroes
                 if (Time.time > nextAttackTime && target.isActiveAndEnabled)
                 {
                     nextAttackTime = Time.time + attackRate;
-                    // Set the fired flag so only Fire is only called once.
-                    attacked = true;
+
                     Audio();
 
 

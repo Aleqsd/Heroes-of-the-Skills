@@ -1667,9 +1667,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyOnDeath: 1
-  respawnOnDeath: 0
-  EnemySpawner: {fileID: 1856571069107466, guid: 32b64ff9adbd10e449d6100f01c2bfd6,
-    type: 2}
   currentHealth: 100
   healthBar: {fileID: 224016092447814950}
   dead: 0
@@ -1933,7 +1930,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1362143274093392}
   m_LocalRotation: {x: 0, y: -0.9840856, z: -0, w: -0.17769514}
-  m_LocalPosition: {x: 0, y: 0, z: -0.02500623}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.0050000013, y: 0.005, z: 0.0050000013}
   m_Children:
   - {fileID: 224650424484761826}
@@ -1942,6 +1939,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.06698785, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 1.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -85,6 +85,6 @@ public class PlayerController : NetworkBehaviour
     {
         GetComponent<MeshRenderer>().material.color = Color.blue;
         health = GetComponent<Health>();
-        Camera.main.GetComponent<ThirdPersonCamera>().SetTarget(transform); //Fix camera on "me"
+        gameObject.AddComponent<AudioListener>();
     }
 }

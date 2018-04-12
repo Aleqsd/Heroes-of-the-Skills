@@ -923,8 +923,8 @@ MonoBehaviour:
   m_OfflineScene: 
   m_OnlineScene: 
   m_SpawnPrefabs:
-  - {fileID: 1552292023715322, guid: cca12ab2bd463fc4c91b27f307affe5e, type: 2}
-  - {fileID: 1060232746271902, guid: 4d8f473f878cf0044911aa5c4803dbd4, type: 2}
+  - {fileID: 100000, guid: bad0018eb9256e6409155981dd5af9a2, type: 2}
+  - {fileID: 100000, guid: 03195f095903a914192b43fe5bb968e1, type: 2}
   - {fileID: 1632105341384156, guid: 181b6e1962149454db5503d4876a5cff, type: 2}
   - {fileID: 1705407429987246, guid: b43dfd909edf8ee4cb0cbef107bfd32c, type: 2}
   - {fileID: 1056628318058286, guid: e887e957e2b023d43a067071e27919b5, type: 2}

@@ -83,7 +83,7 @@ public class PlayerController : NetworkBehaviour
 
     public override void OnStartLocalPlayer()
     {
-        GetComponent<MeshRenderer>().material.color = Color.blue;
+        //GetComponent<MeshRenderer>().material.color = Color.blue;
         health = GetComponent<Health>();
         gameObject.AddComponent<AudioListener>();
     }

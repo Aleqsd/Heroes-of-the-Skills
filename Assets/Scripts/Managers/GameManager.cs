@@ -377,7 +377,7 @@ namespace Heroes
             GameObject playerPrefab = spawnPrefabs[id];
 
 
-            GameObject player = (GameObject)Instantiate(playerPrefab, new Vector3(0, 1, 0), Quaternion.identity);
+            GameObject player = (GameObject)Instantiate(playerPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             players.Add(player);
 
 

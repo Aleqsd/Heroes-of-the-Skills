@@ -14,8 +14,11 @@ public class PlayerController : NetworkBehaviour
     {
         if (!isLocalPlayer)
         {
+            this.transform.GetChild(0).GetComponent<Camera>().enabled = false;
             return;
         }
+
+        this.transform.GetChild(0).GetComponent<Camera>().enabled = true;
 
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
         var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
@@ -82,6 +85,6 @@ public class PlayerController : NetworkBehaviour
     {
         GetComponent<MeshRenderer>().material.color = Color.blue;
         health = GetComponent<Health>();
-        Camera.main.GetComponent<ThirdPersonCamera>().SetTarget(gameObject.transform);
+        Camera.main.GetComponent<ThirdPersonCamera>().SetTarget(transform); //Fix camera on "me"
     }
 }

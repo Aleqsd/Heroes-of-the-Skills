@@ -5,7 +5,6 @@ using System.Collections;
 
 public class Health : NetworkBehaviour
 {
-
     public const int maxHealth = 100;
     public bool destroyOnDeath;
 
@@ -15,8 +14,6 @@ public class Health : NetworkBehaviour
     public RectTransform healthBar;
     
 
-    
-
     Animator animator;
     [HideInInspector] public bool dead;                // Has the bot been reduced beyond zero health yet?
     public AudioSource healthAudio;                   // The audio source to play.
@@ -24,8 +21,6 @@ public class Health : NetworkBehaviour
     public AudioClip dying;                           // Audio to play when the bot is dying.
     public GameObject[] bloodPrefabs;                 // Blood to spill when getting hit
     public GameObject[] bloodEffects;
-
-
 
     public float getHealth()                          // can get, not set
     {
@@ -73,13 +68,6 @@ public class Health : NetworkBehaviour
         // TODO : spill in the opposite position to the impact
     }
 
-
-
-
-
-
-
-
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -90,7 +78,6 @@ public class Health : NetworkBehaviour
     {
         //if (!isServer)
         //    return;
-        
 
         currentHealth -= amount;
         if (currentHealth <= 0 && !dead)

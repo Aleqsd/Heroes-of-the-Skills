@@ -1,22 +1,21 @@
 ToDo : (par priorités)
 
-Mécanisme d'attaque et de vie :
-  Tirer sur les monstres, le monstre meurt - fait
-  Le monstre nous attaque, peut nous tuer - fait
-  Doit marcher en multi - pas testé
+Multi :
+  Attaquer des monstres, heal des joueurs
+  Les déplacements des joueurs et monstres
+  Les attaques des monstres et joueurs
+  Caméra et UI
+  Boucle de jeu
   
-Map :
-  Créer une map en croix, 4 waves, mettre un chateau au milieu ou quoi
-  La faire moche déjà, joli après
-
-Caméra :
-  Mettre une caméra en 3eme personne, peut être un peu à côté du joueur (comme Batman/Tomb Rider), tester...
-  Voir que ça marche bien en multi
+Graphisme :
+  Intégrer une map
+  Travailler l'UI
+  Changer les personnages avec des assets
   
 Classes :
   Gérer les 4 classes (Wizard, Pretre, Archer, Ninja)
   Créer les 2 classes supplémentaires, mettre des projectiles fleches shuriken
   Penser à des attaques spéciales
-
-Boucle de jeu : 
-  Conditions de victoir / défaites etc ...
+  
+GDD :
+  Préremplir le GDD

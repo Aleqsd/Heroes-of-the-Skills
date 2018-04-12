@@ -57,6 +57,8 @@ namespace Heroes
             Cursor.visible = true; // Needed after finishing game, the cursor need to be turned on again
             Cursor.lockState = CursorLockMode.None;
 
+            gameObject.AddComponent<AudioListener>();
+
             // Create the delays so they only have to be made once.
             startWait = new WaitForSeconds(startDelay);
             endWait = new WaitForSeconds(endDelay);
@@ -107,12 +109,15 @@ namespace Heroes
 
         void JoinGame()
         {
-            NetworkManager.singleton.networkAddress = "127.0.0.1";
-                //ipAdress.transform.Find("Text").GetComponent<Text>().text == "" ? "127.0.0.1" :
-                //ipAdress.transform.Find("Text").GetComponent<Text>().text;
+            Debug.Log("text : " + ipAdress.transform.Find("Text").GetComponent<Text>().text);
+
+            NetworkManager.singleton.networkAddress =
+                ipAdress.transform.Find("Text").GetComponent<Text>().text == "" ? "127.0.0.1" :
+                ipAdress.transform.Find("Text").GetComponent<Text>().text;
 
             NetworkManager.singleton.StartClient();
         }
+
 
         void PlayRandomAmbient()
         {
@@ -378,6 +383,13 @@ namespace Heroes
 
             NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
         }
-        
+
+        public override void OnClientDisconnect(NetworkConnection conn)
+        {
+            base.OnClientDisconnect(conn);
+            Debug.Log("Client disconnected");
+        }
+
+
     }
 }

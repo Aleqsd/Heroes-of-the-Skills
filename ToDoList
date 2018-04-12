@@ -1,10 +1,7 @@
 ToDo : (par priorités)
 
 Multi :
-  Attaquer des monstres, heal des joueurs
-  Les déplacements des joueurs et monstres
-  Les attaques des monstres et joueurs
-  Caméra et UI
+  heal des joueurs
   Boucle de jeu
   
 Graphisme :
@@ -12,10 +9,11 @@ Graphisme :
   Travailler l'UI
   Changer les personnages avec des assets
   
-Classes :
-  Gérer les 4 classes (Wizard, Pretre, Archer, Ninja)
-  Créer les 2 classes supplémentaires, mettre des projectiles fleches shuriken
+Classes et effets:
+  Gérer les 4 classes (Feu, Air, Electricity, Heal/Dark)
+  Créer les 2 classes supplémentaires
   Penser à des attaques spéciales
+  Utiliser les effects (Cartoon FX Free)
   
 GDD :
   Préremplir le GDD

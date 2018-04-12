@@ -243,16 +243,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyOnDeath: 1
-  respawnOnDeath: 0
-  EnemySpawner: {fileID: 0}
   currentHealth: 100
   healthBar: {fileID: 224389078891960756}
   dead: 0
   healthAudio: {fileID: 82243328861433114}
   gettingHit: {fileID: 0}
   dying: {fileID: 0}
-  bloodPrefabs: []
-  bloodEffects: []
+  deathEffects:
+  - {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 2}
 --- !u!114 &114425019248207598
 MonoBehaviour:
   m_ObjectHideFlags: 1

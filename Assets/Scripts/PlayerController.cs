@@ -6,9 +6,15 @@ public class PlayerController : NetworkBehaviour
 	public GameObject bulletPrefab;
 	public GameObject specialBulletPrefab;
     public Transform bulletSpawn;
+    public Animator anim;
 	public float specialFireRate = 10;
 	private float nextFire;
     [HideInInspector] public Health health;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -22,13 +28,22 @@ public class PlayerController : NetworkBehaviour
 
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
         var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
-
+        if (Input.GetAxis("Vertical") > 0)
+        {
+            
+            anim.SetFloat("Input X", Input.GetAxis("Vertical"));
+            anim.SetFloat("Input Z", Input.GetAxis("Horizontal"));
+            anim.SetBool("Moving", true);
+        }
+        else
+            anim.SetBool("Moving", false);
         transform.Rotate(0, x, 0);
         transform.Translate(0, 0, z);
 
 		//Espace
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            anim.SetTrigger("Attack1Trigger");
             CmdFire();
         }
 
@@ -53,13 +68,13 @@ public class PlayerController : NetworkBehaviour
             bulletSpawn.rotation);
 
         // Add velocity to the bullet
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 60;
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 15;
 
         // Spawn the bullet on the Clients
         NetworkServer.Spawn(bullet);
 
-        // Destroy the bullet after 2 seconds
-        Destroy(bullet, 2.0f);
+        // Destroy the bullet after 5 seconds
+        Destroy(bullet, 5.0f);
     }
 
 	[Command]

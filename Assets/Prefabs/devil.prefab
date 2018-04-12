@@ -2220,10 +2220,8 @@ MonoBehaviour:
   healthAudio: {fileID: 82505145449975186}
   gettingHit: {fileID: 0}
   dying: {fileID: 0}
-  bloodPrefabs:
-  - {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 2}
-  bloodEffects:
-  - {fileID: 1400662294947608, guid: 17be1a73d00b474429bd5753f7849ce9, type: 2}
+  deathEffects:
+  - {fileID: 100004, guid: 7867af58a6ec48846ae807eb4022fbaa, type: 2}
 --- !u!114 &114239965815610908
 MonoBehaviour:
   m_ObjectHideFlags: 1

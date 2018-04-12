@@ -19,7 +19,7 @@ public class Health : NetworkBehaviour
     public AudioSource healthAudio;                   // The audio source to play.
     public AudioClip gettingHit;                      // Audio to play when the bot is getting hit.
     public AudioClip dying;                           // Audio to play when the bot is dying.
-    public GameObject[] bloodEffects;
+    public GameObject[] deathEffects;
 
     public float getHealth()                          // can get, not set
     {
@@ -53,10 +53,7 @@ public class Health : NetworkBehaviour
         }
     }
 
-    private void SpillBlood()
-    {
-            Destroy(Instantiate(bloodEffects[Random.Range(0, bloodEffects.Length)], new Vector3(transform.position.x, transform.position.y, transform.position.z), new Quaternion(0, 0, 0, 0)), 3);
-    }
+
 
     void Start()
     {
@@ -77,6 +74,8 @@ public class Health : NetworkBehaviour
             if (destroyOnDeath)
             {
                 Destroy(gameObject);
+                if (deathEffects.Length > 0)
+                    Destroy(Instantiate(deathEffects[Random.Range(0, deathEffects.Length)], new Vector3(transform.position.x, transform.position.y, transform.position.z), new Quaternion(0, 0, 0, 0)), 3);
             }
 
             else
@@ -87,7 +86,6 @@ public class Health : NetworkBehaviour
             }
         }
 
-        SpillBlood();
         Audio();
     }
 

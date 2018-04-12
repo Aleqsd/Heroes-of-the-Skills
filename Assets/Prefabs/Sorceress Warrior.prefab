@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 114632443191459456}
   - component: {fileID: 114515838138024210}
   - component: {fileID: 136309325318596288}
+  - component: {fileID: 114758148874991612}
   m_Layer: 9
   m_Name: Sorceress Warrior
   m_TagString: Untagged
@@ -2457,6 +2458,7 @@ MonoBehaviour:
   specialBulletPrefab: {fileID: 1970601040429072, guid: fbc9e1435fccc4b5eb121073933e774c,
     type: 2}
   bulletSpawn: {fileID: 4973056701168446}
+  anim: {fileID: 9590292}
   specialFireRate: 10
   health: {fileID: 0}
 --- !u!114 &114632443191459456
@@ -2477,7 +2479,7 @@ MonoBehaviour:
   healthAudio: {fileID: 0}
   gettingHit: {fileID: 0}
   dying: {fileID: 0}
-  bloodEffects: []
+  deathEffects: []
 --- !u!114 &114660774608282068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2520,6 +2522,25 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &114758148874991612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1590678366, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 9590292}
+  m_ParameterSendBits: 15
+  param0: 
+  param1: 
+  param2: 
+  param3: 
+  param4: 
+  param5: 
 --- !u!114 &114839232564409806
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -65,11 +65,6 @@ namespace Heroes
         }
 
 
-        private void OnDisable()
-        {
-            // When the bot is turned off, set it to kinematic so it stops moving.
-            rigidbody.isKinematic = true;
-        }
 
 
         public void Move(Vector3 destination)

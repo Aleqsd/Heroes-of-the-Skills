@@ -112,8 +112,6 @@ namespace Heroes
                 //ipAdress.transform.Find("Text").GetComponent<Text>().text;
 
             NetworkManager.singleton.StartClient();
-
-            // StartCoroutine(GameLoop());
         }
 
         void PlayRandomAmbient()
@@ -182,8 +180,6 @@ namespace Heroes
             // Wait other players
             while (NetworkServer.connections.Count < 2)
             {
-                //Debug.Log("Connections : " + NetworkServer.connections.Count);
-                //messageText.transform.Rotate(Vector3.one);
                 yield return null;
                 
             }
@@ -307,25 +303,6 @@ namespace Heroes
         }
 
 
-
-        private void DisableControl()
-        {
-            for (int i = 0; i < bots.Count; i++)
-            {
-                bots[i].DisableControl();
-            }
-            //player.control = false;
-        }
-
-        private void EnableControl()
-        {
-            for (int i = 0; i < bots.Count; i++)
-            {
-                bots[i].EnableControl();
-            }
-            //player.control = true;
-        }
-
         private int CountBotInstances()
         {
             int count = 0;
@@ -390,16 +367,6 @@ namespace Heroes
 
             GameObject playerPrefab = spawnPrefabs[id];
 
-            /*
-            Transform startPos = GetStartPosition();
-            if (startPos != null)
-            {
-                player = (GameObject)Instantiate(playerPrefab, startPos.position, startPos.rotation);
-            }
-            else
-            {
-                player = (GameObject)Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
-            }*/
 
             GameObject player = (GameObject)Instantiate(playerPrefab, new Vector3(0, 1, 0), Quaternion.identity);
             players.Add(player);

@@ -38,8 +38,8 @@ GameObject:
   - component: {fileID: 4496984495774748}
   - component: {fileID: 20682170104831790}
   - component: {fileID: 124111177192605856}
-  - component: {fileID: 81050148571627824}
   - component: {fileID: 114340710719144678}
+  - component: {fileID: 81369559292376318}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -396,7 +396,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!81 &81050148571627824
+--- !u!81 &81369559292376318
 AudioListener:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -575,8 +575,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyOnDeath: 1
-  respawnOnDeath: 0
-  EnemySpawner: {fileID: 0}
   currentHealth: 100
   healthBar: {fileID: 224310301261252368}
   dead: 0

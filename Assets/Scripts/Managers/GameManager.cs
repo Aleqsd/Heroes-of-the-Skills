@@ -30,6 +30,8 @@ namespace Heroes
         public AudioClip[] ambients;                      // Ambient audio
         [HideInInspector] public List<AiManager> bots;     // A collection of managers for enabling and disabling different aspects of the bots.
 
+        public GameObject messageCanvas;
+
 
         public Text messageText;                  // Reference to the overlay Text to display winning text, etc.
         public Text scoreText;                  // Reference to the overlay score
@@ -54,6 +56,7 @@ namespace Heroes
         // Use this for initialization
         void Start()
         {
+            Debug.Log("Start GameManager");
             Cursor.visible = true; // Needed after finishing game, the cursor need to be turned on again
             Cursor.lockState = CursorLockMode.None;
 
@@ -73,8 +76,8 @@ namespace Heroes
 
             indexTexture = 0;
             //InvokeRepeating("ChangeBackground", 0.04f, 0.04f);
-            hostButton.onClick.AddListener(StartGame);
-            joinButton.onClick.AddListener(JoinGame);
+
+            messageCanvas.SetActive(true);
             
             player1Button.onClick.AddListener(delegate { AvatarPicker(player1Button.name); });
             player2Button.onClick.AddListener(delegate { AvatarPicker(player2Button.name); });
@@ -89,14 +92,15 @@ namespace Heroes
 
 
 
-        void StartGame()
+        public void StartGame()
         {
+            Debug.Log("StartGame GameManager");
             NetworkManager.singleton.StartHost();
-            Destroy(hostButton.gameObject); // TODO : just hide button
-            Destroy(joinButton.gameObject); // TODO : just hide button
-            Destroy(ipAdress.gameObject);
-            CancelInvoke("ChangeBackground");
-            backgroundImage.enabled = false;
+            //Destroy(hostButton.gameObject); // TODO : just hide button
+            //Destroy(joinButton.gameObject); // TODO : just hide button
+            //Destroy(ipAdress.gameObject);
+            //CancelInvoke("ChangeBackground");
+            //backgroundImage.enabled = false;
             Destroy(GetComponent<AudioListener>()); // During start screen there is no cameras because it's attached to the character
                                                     // that didn't spawn yet, so we need an audio listener on game manager to
                                                     // hear start music
@@ -160,13 +164,29 @@ namespace Heroes
             {
                 case GameState.Won:
                     // If there is a game winner, restart the level.
+
+                    // Forces the server to shutdown.
+                    NetworkManager.singleton.StopHost();
+                    NetworkManager.singleton.StopClient();
+                    Shutdown();
+
+                    // Reset internal state of the server and start the server again.
+                    Start();
                     ServerChangeScene("Main");
-                    //NetworkManager.singleton.StopHost();
-                    //NetworkManager.singleton.StopClient();
+
                     break;
                 case GameState.Lost:
                     // If game is lost, restart the level.
+
+
+                    NetworkManager.singleton.StopHost();
+                    NetworkManager.singleton.StopClient();
+                    Shutdown();
+
+                    // Reset internal state of the server and start the server again.
+                    Start();
                     ServerChangeScene("Main");
+
                     //NetworkManager.singleton.StopHost();
                     //NetworkManager.singleton.StopClient();
                     break;
@@ -349,8 +369,7 @@ namespace Heroes
 
         public override void OnClientConnect(NetworkConnection conn)
         {
-            GameObject.Find("GuiPanel").SetActive(false);
-            Destroy(backgroundImage.gameObject);
+            messageCanvas.SetActive(false);
 
             IntegerMessage msg = new IntegerMessage(avatarIndex);
 
@@ -392,6 +411,13 @@ namespace Heroes
             Debug.Log("Client disconnected");
         }
 
+        public override void OnServerDisconnect(NetworkConnection conn)
+        {
+            Debug.Log("Client disconnected: " + conn.lastError);
+
+            // Removes the player game object from the world.
+            NetworkServer.DestroyPlayersForConnection(conn);
+        }
 
     }
 }

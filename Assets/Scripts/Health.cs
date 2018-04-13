@@ -14,7 +14,7 @@ public class Health : NetworkBehaviour
     public RectTransform healthBar;
     
 
-    private Animator animator;
+    private Animator anim;
     [HideInInspector] public bool dead;                // Has the bot been reduced beyond zero health yet?
     public AudioSource healthAudio;                   // The audio source to play.
     public AudioClip gettingHit;                      // Audio to play when the bot is getting hit.
@@ -57,7 +57,7 @@ public class Health : NetworkBehaviour
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
 
     }
 
@@ -85,6 +85,8 @@ public class Health : NetworkBehaviour
 
             }
         }
+        else
+            anim.SetTrigger("isAttacked");
 
         Audio();
     }

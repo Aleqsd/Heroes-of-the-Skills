@@ -72,9 +72,6 @@ public class PlayerController : NetworkBehaviour
 
         // Spawn the bullet on the Clients
         NetworkServer.Spawn(bullet);
-
-        // Destroy the bullet after 5 seconds
-        Destroy(bullet, 5.0f);
     }
 
 	[Command]

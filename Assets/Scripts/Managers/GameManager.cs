@@ -56,7 +56,7 @@ namespace Heroes
         // Use this for initialization
         void Start()
         {
-            Debug.Log("Start GameManager");
+            //Debug.Log("Start GameManager");
             Cursor.visible = true; // Needed after finishing game, the cursor need to be turned on again
             Cursor.lockState = CursorLockMode.None;
 
@@ -94,7 +94,7 @@ namespace Heroes
 
         public void StartGame()
         {
-            Debug.Log("StartGame GameManager");
+            //Debug.Log("StartGame GameManager");
             NetworkManager.singleton.StartHost();
             //Destroy(hostButton.gameObject); // TODO : just hide button
             //Destroy(joinButton.gameObject); // TODO : just hide button
@@ -111,9 +111,9 @@ namespace Heroes
             StartCoroutine(GameLoop());
         }
 
-        void JoinGame()
+        public void JoinGame()
         {
-            Debug.Log("text : " + ipAdress.transform.Find("Text").GetComponent<Text>().text);
+            //Debug.Log("text : " + ipAdress.transform.Find("Text").GetComponent<Text>().text);
 
             NetworkManager.singleton.networkAddress =
                 ipAdress.transform.Find("Text").GetComponent<Text>().text == "" ? "127.0.0.1" :

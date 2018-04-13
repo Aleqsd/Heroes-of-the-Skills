@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4479959672741796}
   - component: {fileID: 198371319180991648}
   - component: {fileID: 199150850567225052}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 114741595101151296}
   - component: {fileID: 135614330178711096}
   - component: {fileID: 54308137170884362}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ElectricityBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 4925050358094102}
   - component: {fileID: 108941961953499912}
   - component: {fileID: 114344425853973164}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1187347412170472}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.71

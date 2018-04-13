@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class HealBall : MonoBehaviour {
 
-    void OnCollisionEnter(Collision collision)
+    private void Start()
     {
-        GameObject hit = collision.gameObject;
-        Health health = hit.GetComponent<Health>();
-        if (health != null)
-        {
-            health.GetHealed(10);
-        }
 
+        // Destroy the bullet after 5 seconds
+        Destroy(gameObject, 5.0f);
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.CompareTag("Player"))
+        { 
+            Health health = collider.gameObject.GetComponent<Health>();
+            if (health)
+            {
+                health.GetHealed(10);
+            }
+        }
         Destroy(gameObject);
     }
 }

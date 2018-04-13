@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+    private void Start()
     {
-        GameObject hit = collision.gameObject;
-        if (hit.CompareTag("Enemy"))
+
+        // Destroy the bullet after 5 seconds
+        Destroy(gameObject, 5.0f);
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        //GameObject hit = collider.gameObject;
+        if (collider.gameObject.CompareTag("Enemy"))
         {
-            Health health = hit.GetComponent<Health>();
-            if (health != null)
+            Health health = collider.gameObject.GetComponent<Health>();
+            if (health)
             {
                 health.TakeDamage(10);
             }

@@ -32,7 +32,7 @@ namespace Heroes
 
         public GameObject messageCanvas;
 
-
+        //[SyncVar(hook = "OnTextChange")]
         public Text messageText;                  // Reference to the overlay Text to display winning text, etc.
         public Text scoreText;                  // Reference to the overlay score
         public Button hostButton;
@@ -417,6 +417,11 @@ namespace Heroes
 
             // Removes the player game object from the world.
             NetworkServer.DestroyPlayersForConnection(conn);
+        }
+
+        private void OnTextChange(Text newValue)
+        {
+            messageText = newValue;  // Unity's UI Text component
         }
 
     }

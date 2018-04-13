@@ -187,13 +187,14 @@ namespace Heroes
             messageText.text = "Waiting more players ...";
 
             // Wait other players
-            /*
+            
             while (NetworkServer.connections.Count < 2)
             {
                 yield return null;
-                
+                if (Input.GetKeyDown(KeyCode.Space))
+                    break;
             }
-            */
+            
             gameState = GameState.Playing;
             messageText.text = "Kill them all";
 

@@ -311,10 +311,10 @@ AnimatorState:
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 7757f98df61622f4791692a0950e9711, type: 3}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: Input X
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
-  m_TimeParameter: 
+  m_TimeParameter: Input X
 --- !u!1107 &110700000
 AnimatorStateMachine:
   serializedVersion: 5
@@ -336,9 +336,7 @@ AnimatorStateMachine:
   m_AnyStateTransitions:
   - {fileID: 110135962}
   m_EntryTransitions: []
-  m_StateMachineTransitions:
-  - first: {fileID: 110700000}
-    second: []
+  m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -264, y: 48, z: 0}
   m_EntryPosition: {x: -36, y: 192, z: 0}

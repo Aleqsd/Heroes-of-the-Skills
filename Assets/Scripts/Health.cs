@@ -14,7 +14,7 @@ public class Health : NetworkBehaviour
     public RectTransform healthBar;
     
 
-    Animator animator;
+    private Animator animator;
     [HideInInspector] public bool dead;                // Has the bot been reduced beyond zero health yet?
     public AudioSource healthAudio;                   // The audio source to play.
     public AudioClip gettingHit;                      // Audio to play when the bot is getting hit.

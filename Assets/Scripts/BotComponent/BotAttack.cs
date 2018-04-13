@@ -9,7 +9,12 @@ namespace Heroes
         private float nextAttackTime; // kind of attack speed thing, useful
         public AudioSource attackAudio;               // The audio source to play.
         public AudioClip attack;            // Audio to play when the bot attack.
+        private Animator anim;
 
+        private void Start()
+        {
+            anim = GetComponent<Animator>();
+        }
 
         public void Attack(float attackRate, RaycastHit hit) // attackSpeed ?
         {
@@ -25,7 +30,7 @@ namespace Heroes
                     nextAttackTime = Time.time + attackRate;
 
                     Audio();
-
+                    anim.SetTrigger("isAttack");
 
                     if (target.getHealth() <= 0)
                         return;

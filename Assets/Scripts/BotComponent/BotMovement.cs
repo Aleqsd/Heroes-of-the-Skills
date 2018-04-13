@@ -72,7 +72,8 @@ namespace Heroes
             Audio();
             if (navMeshAgent.enabled)
                 navMeshAgent.destination = destination;
-            anim.SetBool("isRun",true);
+            anim.SetBool("isMove", true);
+            
         }
 
 

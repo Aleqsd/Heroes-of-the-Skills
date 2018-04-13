@@ -13,7 +13,6 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        //GameObject hit = collider.gameObject;
         if (collider.gameObject.CompareTag("Enemy"))
         {
             Health health = collider.gameObject.GetComponent<Health>();

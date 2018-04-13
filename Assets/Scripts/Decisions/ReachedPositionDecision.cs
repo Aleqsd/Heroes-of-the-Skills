@@ -29,7 +29,7 @@ namespace Heroes
                 if (Physics.SphereCast(castOrigin, controller.aiParameters.lookSphereCastRadius * 3, controller.eyes.forward, out hit, controller.aiParameters.lookRange, LayerMask.GetMask("Nexus")))
                 {
                     controller.target = hit.transform;
-                    Debug.Log("target : " + controller.target);
+                    //Debug.Log("target : " + controller.target);
                 }
             }
             return reachedPosition;

@@ -14,7 +14,8 @@ public class HealBall : MonoBehaviour {
     void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.CompareTag("Player"))
-        { 
+        {
+            Debug.Log("heal");
             Health health = collider.gameObject.GetComponent<Health>();
             if (health)
             {

@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 135373621838575222}
   - component: {fileID: 54212108729664840}
   - component: {fileID: 114364168048932086}
+  - component: {fileID: 114891983731679960}
   m_Layer: 12
   m_Name: Aura Bubble
   m_TagString: Untagged
@@ -187,6 +188,19 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &114891983731679960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844191813266838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b78c1ba9facacbd48b8e1d9a4fb3ee0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation: {x: 0, y: 0, z: 0}
+  space: 1
 --- !u!135 &135373621838575222
 SphereCollider:
   m_ObjectHideFlags: 1

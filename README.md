@@ -1,4 +1,4 @@
-# Heroes-of-the-Skills
+# Heroes of the Skills
 
 ## Introduction
 

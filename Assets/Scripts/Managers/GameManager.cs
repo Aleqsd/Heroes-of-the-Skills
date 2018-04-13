@@ -31,8 +31,7 @@ namespace Heroes
         [HideInInspector] public List<AiManager> bots;     // A collection of managers for enabling and disabling different aspects of the bots.
 
         public GameObject messageCanvas;
-
-        //[SyncVar(hook = "OnTextChange")]
+        
         public Text messageText;                  // Reference to the overlay Text to display winning text, etc.
         public Text scoreText;                  // Reference to the overlay score
         public Button hostButton;
@@ -205,6 +204,7 @@ namespace Heroes
             roundNumber = 0;
 
             messageText.text = "Waiting more players ...";
+
 
             // Wait other players
             
@@ -419,10 +419,7 @@ namespace Heroes
             NetworkServer.DestroyPlayersForConnection(conn);
         }
 
-        private void OnTextChange(Text newValue)
-        {
-            messageText = newValue;  // Unity's UI Text component
-        }
+ 
 
     }
 }

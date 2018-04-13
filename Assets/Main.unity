@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 71f14a2d79f732f4d9893ef1b911f4ff, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -211,6 +211,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &365781784 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1240199785415252, guid: b3c07b26b727c46469b6b997a80f30f2,
+    type: 2}
+  m_PrefabInternal: {fileID: 768590035}
+--- !u!114 &365781788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 365781784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 179
+    i1: 192
+    i2: 123
+    i3: 38
+    i4: 183
+    i5: 39
+    i6: 196
+    i7: 100
+    i8: 105
+    i9: 182
+    i10: 185
+    i11: 151
+    i12: 168
+    i13: 15
+    i14: 48
+    i15: 242
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!1 &489679227 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1097884187808894, guid: b3c07b26b727c46469b6b997a80f30f2,
@@ -347,7 +384,7 @@ Prefab:
     - target: {fileID: 224403899458836892, guid: b3c07b26b727c46469b6b997a80f30f2,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -36
+      value: -51.5
       objectReference: {fileID: 0}
     - target: {fileID: 224403899458836892, guid: b3c07b26b727c46469b6b997a80f30f2,
         type: 2}
@@ -377,7 +414,7 @@ Prefab:
     - target: {fileID: 224128821497626458, guid: b3c07b26b727c46469b6b997a80f30f2,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -116
+      value: -131.5
       objectReference: {fileID: 0}
     - target: {fileID: 224128821497626458, guid: b3c07b26b727c46469b6b997a80f30f2,
         type: 2}
@@ -402,12 +439,12 @@ Prefab:
     - target: {fileID: 224449622188347806, guid: b3c07b26b727c46469b6b997a80f30f2,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 456.5
+      value: 1256.5
       objectReference: {fileID: 0}
     - target: {fileID: 224449622188347806, guid: b3c07b26b727c46469b6b997a80f30f2,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -196
+      value: -51.5
       objectReference: {fileID: 0}
     - target: {fileID: 224449622188347806, guid: b3c07b26b727c46469b6b997a80f30f2,
         type: 2}
@@ -432,12 +469,12 @@ Prefab:
     - target: {fileID: 224308065343053262, guid: b3c07b26b727c46469b6b997a80f30f2,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 456.5
+      value: 1256.5
       objectReference: {fileID: 0}
     - target: {fileID: 224308065343053262, guid: b3c07b26b727c46469b6b997a80f30f2,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -276
+      value: -131.5
       objectReference: {fileID: 0}
     - target: {fileID: 224308065343053262, guid: b3c07b26b727c46469b6b997a80f30f2,
         type: 2}
@@ -462,12 +499,12 @@ Prefab:
     - target: {fileID: 224937336039000104, guid: b3c07b26b727c46469b6b997a80f30f2,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 456.5
+      value: 2056.5
       objectReference: {fileID: 0}
     - target: {fileID: 224937336039000104, guid: b3c07b26b727c46469b6b997a80f30f2,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -356
+      value: -51.5
       objectReference: {fileID: 0}
     - target: {fileID: 224937336039000104, guid: b3c07b26b727c46469b6b997a80f30f2,
         type: 2}
@@ -492,12 +529,12 @@ Prefab:
     - target: {fileID: 224560307008931484, guid: b3c07b26b727c46469b6b997a80f30f2,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 456.5
+      value: 2056.5
       objectReference: {fileID: 0}
     - target: {fileID: 224560307008931484, guid: b3c07b26b727c46469b6b997a80f30f2,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -436
+      value: -131.5
       objectReference: {fileID: 0}
     - target: {fileID: 224560307008931484, guid: b3c07b26b727c46469b6b997a80f30f2,
         type: 2}
@@ -744,6 +781,8 @@ MonoBehaviour:
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:
+    m_PacketSize: 1440
+    m_FragmentSize: 500
     m_ResendTimeout: 1200
     m_DisconnectTimeout: 2000
     m_ConnectTimeout: 2000
@@ -756,10 +795,14 @@ MonoBehaviour:
     m_MaxConnectionAttempt: 10
     m_AckDelay: 33
     m_SendDelay: 10
+    m_MaxCombinedReliableMessageSize: 100
+    m_MaxCombinedReliableMessageCount: 10
+    m_MaxSentMessageQueueSize: 512
     m_AcksType: 1
     m_UsePlatformSpecificProtocols: 0
     m_InitialBandwidth: 0
     m_BandwidthPeakFactor: 2
+    m_WebSocketReceiveBufferMaxSize: 0
     m_UdpSocketReceiveBufferMaxSize: 0
     m_SSLCertFilePath: 
     m_SSLPrivateKeyFilePath: 
@@ -768,6 +811,10 @@ MonoBehaviour:
   m_GlobalConfig:
     m_ThreadAwakeTimeout: 1
     m_ReactorModel: 0
+    m_ReactorMaximumReceivedMessages: 1024
+    m_ReactorMaximumSentMessages: 1024
+    m_MaxPacketSize: 2000
+    m_MaxHosts: 16
     m_ThreadPoolSize: 1
     m_MinTimerTimeout: 1
     m_MaxTimerTimeout: 12000

@@ -6,7 +6,7 @@ public class BotPhysics : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Physics.IgnoreCollision(GetComponent<Collider>(), GetComponent<Collider>());
+        //Physics.IgnoreCollision(GetComponent<Collider>(), GetComponent<Collider>());
 
     }
 	

@@ -95,7 +95,7 @@ public class Health : NetworkBehaviour
     {
         //if (!isServer)
         //    return;
-
+        Debug.Log("gethealed");
         currentHealth += amount;
         if (currentHealth > maxHealth)
         {

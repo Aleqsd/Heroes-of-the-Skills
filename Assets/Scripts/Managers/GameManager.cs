@@ -12,7 +12,8 @@ namespace Heroes
     {
 
         public Button player1Button;
-        public Button player2Button;
+		public Button player2Button;
+		public Button player3Button;
 
         int avatarIndex = 0;
 
@@ -79,7 +80,8 @@ namespace Heroes
             messageCanvas.SetActive(true);
             
             player1Button.onClick.AddListener(delegate { AvatarPicker(player1Button.name); });
-            player2Button.onClick.AddListener(delegate { AvatarPicker(player2Button.name); });
+			player2Button.onClick.AddListener(delegate { AvatarPicker(player2Button.name); });
+			player3Button.onClick.AddListener(delegate { AvatarPicker(player3Button.name); });
             
         }
 
@@ -355,9 +357,16 @@ namespace Heroes
                     break;
                 case "wizard_icon":
                     avatarIndex = 1;
-                    break;
+					break;
+				case "wind_wizard_icon":
+					avatarIndex = 2;
+					break;
+				case "fire_wizard_icon":
+					avatarIndex = 3;
+					break;
             }
 
+			Debug.Log ("salut : " + avatarIndex);
             playerPrefab = spawnPrefabs[avatarIndex];
         }
 

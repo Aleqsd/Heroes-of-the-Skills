@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 114514926961498996}
   - component: {fileID: 54030824790557342}
   m_Layer: 9
-  m_Name: Mage Warrior
+  m_Name: Mage Fire
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1645,7 +1645,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 12e0ad5d149269340829111a92c559ab, type: 2}
+  - {fileID: 2100000, guid: ae334f40d476c9d419b150c7be8cdd0d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1743,7 +1743,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 12e0ad5d149269340829111a92c559ab, type: 2}
+  - {fileID: 2100000, guid: ae334f40d476c9d419b150c7be8cdd0d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1958,7 +1958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0351f5e9974624cae057d1eb5d280e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1671277992970994, guid: 06f00025fdd4638448eb2461e538d1d1,
+  bulletPrefab: {fileID: 1187347412170472, guid: 71baa40b02986004780a55ec245b35a4,
     type: 2}
   specialBulletPrefab: {fileID: 1428294211895652, guid: d33784dfd7009274dad3376a7830b355,
     type: 2}
@@ -2017,22 +2017,22 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 186
-    i1: 208
-    i2: 1
-    i3: 142
-    i4: 185
-    i5: 37
-    i6: 110
-    i7: 100
-    i8: 9
-    i9: 21
-    i10: 89
-    i11: 129
-    i12: 221
-    i13: 90
-    i14: 249
-    i15: 162
+    i0: 28
+    i1: 69
+    i2: 95
+    i3: 58
+    i4: 141
+    i5: 83
+    i6: 84
+    i7: 4
+    i8: 122
+    i9: 204
+    i10: 8
+    i11: 175
+    i12: 222
+    i13: 216
+    i14: 117
+    i15: 179
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
 --- !u!114 &114514926961498996

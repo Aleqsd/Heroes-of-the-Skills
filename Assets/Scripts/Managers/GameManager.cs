@@ -137,7 +137,7 @@ namespace Heroes
             float ang = Random.value * 360;
             Vector3 pos;
             pos.x = center.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
-            pos.y = center.y;
+            pos.y = 0;
             pos.z = center.z + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
             return pos;
         }
@@ -309,7 +309,6 @@ namespace Heroes
             return players.Count == 0 || !nexus || victory;
         }
 
-
         /**
          * This function is used to spawn all AIs in a random circle around 0,0,0.
          * The spawning doesn't stop until all AIs has spawned
@@ -322,7 +321,7 @@ namespace Heroes
 
                 AiManager bot = new AiManager
                 {
-                    instance = Instantiate(aiPrefabs[Random.Range(0, aiPrefabs.Length)], RandomCircle(Vector3.zero, Random.Range(30, 60)), new Quaternion(0, 0, 0, 0)) as GameObject // TODO : random circle spawn
+                    instance = Instantiate(aiPrefabs[Random.Range(0, aiPrefabs.Length)], RandomCircle(Vector3.zero, Random.Range(30, 60)), new Quaternion(0, 0, 0, 0)) as GameObject
                 };
                 bot.SetupAI();
                 bots.Add(bot);

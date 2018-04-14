@@ -12,7 +12,6 @@ public class Health : NetworkBehaviour
     public int currentHealth = maxHealth;
 
     public RectTransform healthBar;
-    
 
     private Animator anim;
     [HideInInspector] public bool dead;                // Has the bot been reduced beyond zero health yet?

@@ -1698,7 +1698,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1721157202739010}
-  m_LocalRotation: {x: 0.79836667, y: 0.05092465, z: 0.43495014, w: 0.41332263}
+  m_LocalRotation: {x: 0.7983667, y: 0.050924655, z: 0.43495017, w: 0.41332266}
   m_LocalPosition: {x: 0.22994001, y: 0.7188576, z: -0.05180772}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1854,7 +1854,7 @@ Transform:
   m_GameObject: {fileID: 1241948814303102}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4681576877431436}
   - {fileID: 4275706111881348}
@@ -1946,7 +1946,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1970,7 +1970,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &82505145449975186
 AudioSource:
   m_ObjectHideFlags: 1
@@ -2026,7 +2026,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -2050,7 +2050,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &82545658401438612
 AudioSource:
   m_ObjectHideFlags: 1
@@ -2106,7 +2106,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -2130,7 +2130,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!95 &95578003237053028
 Animator:
   serializedVersion: 3

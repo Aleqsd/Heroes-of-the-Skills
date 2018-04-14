@@ -4,6 +4,10 @@
 
 Une armée de monstres souhaite détruire le Nexus. Pour les en empêcher, quatre héros légendaires s’allient et défendent le fort jusqu’à leur dernier souffle.
 
+## TeamSkills
+
+![Alt text](Doc/Team.png?raw=true "TeamSkills")
+
 ## Description
 
 L’objectif est de mettre en scène quatre héros défendant chacun un côté du fort (Nord, Sud, Est, Ouest).
@@ -14,9 +18,23 @@ Si un héros meurt, il réapparaît à la fin d’une vague. Toutefois, si les q
 
 Enfin, si les héros parviennent à se débarrasser de toutes les vagues d’ennemis, le boss de fin de jeu apparaît et il devra être vaincu pour finir la partie.
 
-## TeamSkills
+## Fonctionnalités
 
-![Alt text](Doc/Team.png?raw=true "TeamSkills")
+- Jouable en Solo et Multiplayer
+- Choix possible entre 4 classes (Electricité / Feu / Air / Soins)
+- Attaques simples et attaques spéciales
+- Spawn de monstres
+- Intelligence Artificielle des monstres
+- Système de round
+- Boucle de jeu
+- FX / Particules
+
+A implanter :
+
+- Evolution des spells après les rounds
+- Map / UI
+- Fix d'animations en multi
+- Optimisation de latence multi
 
 ## Game loop
 

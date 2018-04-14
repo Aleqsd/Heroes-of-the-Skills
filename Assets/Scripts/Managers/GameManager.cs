@@ -14,6 +14,7 @@ namespace Heroes
         public Button player1Button;
 		public Button player2Button;
 		public Button player3Button;
+        public Button player4Button;
 
         int avatarIndex = 0;
 
@@ -82,7 +83,8 @@ namespace Heroes
             player1Button.onClick.AddListener(delegate { AvatarPicker(player1Button.name); });
 			player2Button.onClick.AddListener(delegate { AvatarPicker(player2Button.name); });
 			player3Button.onClick.AddListener(delegate { AvatarPicker(player3Button.name); });
-            
+            player4Button.onClick.AddListener(delegate { AvatarPicker(player4Button.name); });
+
         }
 
         void ChangeBackground()
@@ -229,7 +231,7 @@ namespace Heroes
         private IEnumerator GamePlaying()
         {
 
-            nexus = (GameObject)Instantiate(spawnPrefabs[7], new Vector3(0, 0.5f, 0), Quaternion.identity);
+            nexus = (GameObject)Instantiate(spawnPrefabs[9], new Vector3(0, 0.5f, 0), Quaternion.identity);
             NetworkServer.Spawn(nexus);
 
             while (true)
@@ -352,10 +354,10 @@ namespace Heroes
         {
             switch (buttonName)
             {
-                case "warrior_icon":
+                case "electricity_wizard_icon":
                     avatarIndex = 0;
                     break;
-                case "wizard_icon":
+                case "sorceress_icon":
                     avatarIndex = 1;
 					break;
 				case "wind_wizard_icon":
@@ -365,8 +367,7 @@ namespace Heroes
 					avatarIndex = 3;
 					break;
             }
-
-			Debug.Log ("salut : " + avatarIndex);
+            
             playerPrefab = spawnPrefabs[avatarIndex];
         }
 

@@ -1928,6 +1928,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -1958,8 +1959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0351f5e9974624cae057d1eb5d280e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1187347412170472, guid: 71baa40b02986004780a55ec245b35a4,
-    type: 2}
+  bulletPrefab: {fileID: 100004, guid: 023d59d55cde0164cbd39a9a4c3316cf, type: 2}
   specialBulletPrefab: {fileID: 1428294211895652, guid: d33784dfd7009274dad3376a7830b355,
     type: 2}
   bulletSpawn: {fileID: 4436912433557010}
@@ -2244,7 +2244,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1752903571081902}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 224858914733434232}

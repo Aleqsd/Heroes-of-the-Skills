@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 135360688388891480}
   - component: {fileID: 54863544354040544}
   - component: {fileID: 114381145254364634}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: TornadoBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

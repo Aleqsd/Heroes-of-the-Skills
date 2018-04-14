@@ -2,16 +2,13 @@ ToDo : (par priorités)
 
 Multi :
   heal des joueurs
-  Boucle de jeu
   
 Graphisme :
   Intégrer une map
   Travailler l'UI
-  Changer les personnages avec des assets
   
 Classes et effets:
-  Gérer les 4 classes (Feu, Air, Electricity, Heal/Dark)
-  Créer les 2 classes supplémentaires
+  Gérer côté ténébre / light sorciere
   Penser à des attaques spéciales
   Utiliser les effects (Cartoon FX Free)
   

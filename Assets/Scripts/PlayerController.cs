@@ -44,6 +44,8 @@ public class PlayerController : NetworkBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             anim.SetTrigger("Attack1Trigger");
+            GetComponent<NetworkAnimator>().SetTrigger("Attack1Trigger"); 
+            // Needed because the attack animation doesn't properly sync on network
             CmdFire();
         }
 

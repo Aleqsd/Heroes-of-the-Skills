@@ -1959,8 +1959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0351f5e9974624cae057d1eb5d280e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1671277992970994, guid: 06f00025fdd4638448eb2461e538d1d1,
-    type: 2}
+  mainSpell: {fileID: 1671277992970994, guid: 06f00025fdd4638448eb2461e538d1d1, type: 2}
   specialBulletPrefab: {fileID: 1428294211895652, guid: d33784dfd7009274dad3376a7830b355,
     type: 2}
   bulletSpawn: {fileID: 4436912433557010}
@@ -2146,7 +2145,7 @@ MonoBehaviour:
   healthBar: {fileID: 224494447842113732}
   dead: 0
   healthAudio: {fileID: 0}
-  gettingHit: {fileID: 0}
+  gettingHit: []
   dying: {fileID: 0}
   deathEffects: []
 --- !u!124 &124797165871642236

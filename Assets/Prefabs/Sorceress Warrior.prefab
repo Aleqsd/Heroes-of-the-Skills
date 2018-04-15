@@ -942,7 +942,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4117117864621968}
@@ -2453,8 +2453,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0351f5e9974624cae057d1eb5d280e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1844191813266838, guid: a7500edcf7228cf41864743fd81bd301,
-    type: 2}
+  mainSpell: {fileID: 1844191813266838, guid: a7500edcf7228cf41864743fd81bd301, type: 2}
+  spells:
+  - {fileID: 1073268168604084, guid: cf4aa7212e10c9f4997d02e8216c8eca, type: 2}
+  - {fileID: 1073268168604084, guid: cf4aa7212e10c9f4997d02e8216c8eca, type: 2}
+  - {fileID: 1073268168604084, guid: cf4aa7212e10c9f4997d02e8216c8eca, type: 2}
+  - {fileID: 1073268168604084, guid: cf4aa7212e10c9f4997d02e8216c8eca, type: 2}
+  - {fileID: 1073268168604084, guid: cf4aa7212e10c9f4997d02e8216c8eca, type: 2}
   specialBulletPrefab: {fileID: 1970601040429072, guid: fbc9e1435fccc4b5eb121073933e774c,
     type: 2}
   bulletSpawn: {fileID: 4973056701168446}
@@ -2477,7 +2482,7 @@ MonoBehaviour:
   healthBar: {fileID: 224333978451309120}
   dead: 0
   healthAudio: {fileID: 0}
-  gettingHit: {fileID: 0}
+  gettingHit: []
   dying: {fileID: 0}
   deathEffects: []
 --- !u!114 &114660774608282068

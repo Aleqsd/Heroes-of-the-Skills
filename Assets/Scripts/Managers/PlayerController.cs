@@ -3,7 +3,8 @@ using UnityEngine.Networking;
 
 public class PlayerController : NetworkBehaviour
 {
-	public GameObject bulletPrefab;
+	public GameObject mainSpell;
+    public GameObject[] spells;
 	public GameObject specialBulletPrefab;
     public Transform bulletSpawn;
     public Animator anim;
@@ -50,12 +51,17 @@ public class PlayerController : NetworkBehaviour
         }
 
 		//C : Every 'specialFireRate' seconds (10 seconds by default)
-		if (Input.GetKeyDown(KeyCode.Mouse1) && Time.time > nextFire)
+		if (Input.GetKeyDown(KeyCode.R) && Time.time > nextFire)
 		{
 			nextFire = Time.time + specialFireRate;
 			CmdSpecialFire();
 			Debug.Log("Firing once every 10s");
 		}
+        
+        if (Input.GetKeyDown(KeyCode.A) && spells.Length > 0)
+        {
+            CmdChangeForm();
+        }
     }
 
     // This [Command] code is called on the Client …
@@ -65,7 +71,7 @@ public class PlayerController : NetworkBehaviour
     {
         // Create the Bullet from the Bullet Prefab
         GameObject bullet = (GameObject)Instantiate(
-            bulletPrefab,
+            mainSpell,
             bulletSpawn.position,
             bulletSpawn.rotation);
 
@@ -94,6 +100,25 @@ public class PlayerController : NetworkBehaviour
 		// Destroy the bullet after 2 seconds
 		Destroy(specialBullet, 2.0f);
 	}
+
+    // This [Command] code is called on the Client …
+    // … but it is run on the Server!
+    [Command]
+    void CmdChangeForm()
+    {
+
+
+        GameObject spellInstance = (GameObject)Instantiate(
+            spells[4],
+            transform.position,
+            transform.rotation);
+
+        spellInstance.transform.parent = gameObject.transform;
+
+        // Spawn the spellInstance on the Clients
+        NetworkServer.Spawn(spellInstance);
+    }
+
 
     public override void OnStartLocalPlayer()
     {

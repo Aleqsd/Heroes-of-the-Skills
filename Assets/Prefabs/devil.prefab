@@ -2202,12 +2202,11 @@ MonoBehaviour:
   damage: 10
   attackAudio: {fileID: 82083033980674080}
   attack:
-  - {fileID: 8300000, guid: c69816537d46e9144b6cb8c69a4a0b4d, type: 3}
-  - {fileID: 8300000, guid: 4fdc375249849a04ea7f413692621ce4, type: 3}
-  - {fileID: 8300000, guid: 50674c6e4300ce14fa8e681d56199ad7, type: 3}
-  - {fileID: 8300000, guid: 6f39fae89897f7049afa94595ded3948, type: 3}
-  - {fileID: 8300000, guid: a4275428f0b640143950474d9ef2ec31, type: 3}
-  - {fileID: 8300000, guid: 9a0f76d92568d2b499c9c9bf51d90144, type: 3}
+  - {fileID: 8300000, guid: 0fb08fc98b1e28947aaa3eb6fdda50eb, type: 3}
+  - {fileID: 8300000, guid: 8f06149c334f2164789cb9630ab7f624, type: 3}
+  - {fileID: 8300000, guid: de105c46206b14f4798741348121a57d, type: 3}
+  - {fileID: 8300000, guid: c4268ba210bcd594582c8302f75c09b5, type: 3}
+  - {fileID: 8300000, guid: 5a57f3b85b7a6bb4496083d9b4e75b22, type: 3}
 --- !u!114 &114212016629254554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2228,9 +2227,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1b8a96e7dd4f7d947a00e9405163cb37, type: 3}
   - {fileID: 8300000, guid: 0786b17039bc9e741a78addb3c33d0c0, type: 3}
   - {fileID: 8300000, guid: 8ae389b7fb1493a4ba30ef9c30dd003f, type: 3}
-  - {fileID: 8300000, guid: 3c4d7fa34b355034f9117f0f909db5ba, type: 3}
-  - {fileID: 8300000, guid: 0dbec960c163940498a100f066431271, type: 3}
   - {fileID: 8300000, guid: fe009759ab2a7de4499435e53f86f518, type: 3}
+  - {fileID: 8300000, guid: 6c05bdebe742f44449b2ebe3daee4176, type: 3}
   dying: {fileID: 0}
   deathEffects:
   - {fileID: 100004, guid: 7867af58a6ec48846ae807eb4022fbaa, type: 2}

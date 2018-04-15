@@ -1626,7 +1626,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   attackAudio: {fileID: 82656216828861400}
-  attack: {fileID: 8300000, guid: e696b705689388d4185988f737f509a5, type: 3}
+  attack:
+  - {fileID: 8300000, guid: 99e04edd614be124fa34b42c4dac14df, type: 3}
+  - {fileID: 8300000, guid: ed6cb6a5db7211d4c98900fa6a7501f9, type: 3}
+  - {fileID: 8300000, guid: 371e6f4da38f45249bf1b87db3870180, type: 3}
+  - {fileID: 8300000, guid: d36c0d68b611bff4db3dbe6c12c4080a, type: 3}
+  - {fileID: 8300000, guid: ee9e817bcb56a9d4ab5ae47915a8d4fb, type: 3}
+  - {fileID: 8300000, guid: f7f96ece60e71804187c8950d7483558, type: 3}
 --- !u!114 &114459296482016298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1683,7 +1689,12 @@ MonoBehaviour:
   healthBar: {fileID: 224016092447814950}
   dead: 0
   healthAudio: {fileID: 82771192873912904}
-  gettingHit: {fileID: 8300000, guid: 02c02baf2259b264996cfcb6107b211f, type: 3}
+  gettingHit:
+  - {fileID: 8300000, guid: beb97bff8c2d589419cb870953c840e8, type: 3}
+  - {fileID: 8300000, guid: 8ad1cb7206b9c7241b4603de4dd51c65, type: 3}
+  - {fileID: 8300000, guid: 912ee88e24d83034b891eb0aa89b8b92, type: 3}
+  - {fileID: 8300000, guid: fbe3b1a5f6f5c26459df63d325028745, type: 3}
+  - {fileID: 8300000, guid: 486a2b011244a224f9240071200e0299, type: 3}
   dying: {fileID: 0}
   deathEffects:
   - {fileID: 100004, guid: 7867af58a6ec48846ae807eb4022fbaa, type: 2}
@@ -1702,7 +1713,7 @@ MonoBehaviour:
   navMeshAgent: {fileID: 0}
   movementAudio: {fileID: 82370950517739664}
   idling: {fileID: 0}
-  walking: {fileID: 8300000, guid: fdf088c809e8bfe4d9bf288a404eedef, type: 3}
+  walking: {fileID: 0}
 --- !u!114 &114899736333094766
 MonoBehaviour:
   m_ObjectHideFlags: 1

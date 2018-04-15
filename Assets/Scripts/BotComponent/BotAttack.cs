@@ -8,7 +8,7 @@ namespace Heroes
         public int damage = 10;
         private float nextAttackTime; // kind of attack speed thing, useful
         public AudioSource attackAudio;               // The audio source to play.
-        public AudioClip attack;            // Audio to play when the bot attack.
+        public AudioClip[] attack;            // Audio to play when the bot attack.
         private Animator anim;
 
         private void Start()
@@ -46,7 +46,7 @@ namespace Heroes
         {
             if (attackAudio)
             {
-                attackAudio.clip = attack;
+                attackAudio.clip = attack[Random.Range(0, attack.Length)];
                 attackAudio.Play();
             }
         }

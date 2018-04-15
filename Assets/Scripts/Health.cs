@@ -16,7 +16,7 @@ public class Health : NetworkBehaviour
     private Animator anim;
     [HideInInspector] public bool dead;                // Has the bot been reduced beyond zero health yet?
     public AudioSource healthAudio;                   // The audio source to play.
-    public AudioClip gettingHit;                      // Audio to play when the bot is getting hit.
+    public AudioClip[] gettingHit;                      // Audio to play when the bot is getting hit.
     public AudioClip dying;                           // Audio to play when the bot is dying.
     public GameObject[] deathEffects;
 
@@ -41,7 +41,7 @@ public class Health : NetworkBehaviour
         if (healthAudio)
         {
             if (!dead)
-                healthAudio.clip = gettingHit;
+                healthAudio.clip = gettingHit[Random.Range(0,gettingHit.Length)];
             else
                 healthAudio.clip = dying;
 

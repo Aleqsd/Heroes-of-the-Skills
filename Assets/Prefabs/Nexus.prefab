@@ -206,7 +206,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -230,7 +230,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!114 &114073855656694696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -247,7 +247,8 @@ MonoBehaviour:
   healthBar: {fileID: 224389078891960756}
   dead: 0
   healthAudio: {fileID: 82243328861433114}
-  gettingHit: {fileID: 0}
+  gettingHit:
+  - {fileID: 0}
   dying: {fileID: 0}
   deathEffects:
   - {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 2}

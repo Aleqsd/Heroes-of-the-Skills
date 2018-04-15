@@ -1,0 +1,193 @@
+fileFormatVersion: 2
+guid: bd74a589c4dc0e44db8c5d2622a91e18
+timeCreated: 1508243994
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: House007
+    100002: House008
+    100004: //RootNode
+    100006: WindowCover067
+    100008: WindowCover068
+    100010: WindowCover069
+    100012: WindowCover070
+    100014: WindowCover071
+    100016: WindowCover072
+    100018: WindowCover073
+    100020: WindowCover074
+    100022: WindowCover075
+    100024: WindowCover076
+    100026: WindowCover077
+    100028: WindowCover078
+    100030: WindowCover079
+    100032: WindowCover080
+    100034: WindowCover081
+    100036: WindowCover082
+    100038: WindowCover083
+    100040: WindowCover084
+    400000: House007
+    400002: House008
+    400004: //RootNode
+    400006: WindowCover067
+    400008: WindowCover068
+    400010: WindowCover069
+    400012: WindowCover070
+    400014: WindowCover071
+    400016: WindowCover072
+    400018: WindowCover073
+    400020: WindowCover074
+    400022: WindowCover075
+    400024: WindowCover076
+    400026: WindowCover077
+    400028: WindowCover078
+    400030: WindowCover079
+    400032: WindowCover080
+    400034: WindowCover081
+    400036: WindowCover082
+    400038: WindowCover083
+    400040: WindowCover084
+    2300000: House007
+    2300002: House008
+    2300004: WindowCover067
+    2300006: WindowCover068
+    2300008: WindowCover069
+    2300010: WindowCover070
+    2300012: WindowCover071
+    2300014: WindowCover072
+    2300016: WindowCover073
+    2300018: WindowCover074
+    2300020: WindowCover075
+    2300022: WindowCover076
+    2300024: WindowCover077
+    2300026: WindowCover078
+    2300028: WindowCover079
+    2300030: WindowCover080
+    2300032: WindowCover081
+    2300034: WindowCover082
+    2300036: WindowCover083
+    2300038: WindowCover084
+    3300000: House007
+    3300002: House008
+    3300004: WindowCover067
+    3300006: WindowCover068
+    3300008: WindowCover069
+    3300010: WindowCover070
+    3300012: WindowCover071
+    3300014: WindowCover072
+    3300016: WindowCover073
+    3300018: WindowCover074
+    3300020: WindowCover075
+    3300022: WindowCover076
+    3300024: WindowCover077
+    3300026: WindowCover078
+    3300028: WindowCover079
+    3300030: WindowCover080
+    3300032: WindowCover081
+    3300034: WindowCover082
+    3300036: WindowCover083
+    3300038: WindowCover084
+    4300000: WindowCover084
+    4300002: WindowCover083
+    4300004: WindowCover067
+    4300006: WindowCover068
+    4300008: WindowCover072
+    4300010: WindowCover080
+    4300012: WindowCover071
+    4300014: WindowCover079
+    4300016: WindowCover077
+    4300018: WindowCover074
+    4300020: WindowCover078
+    4300022: WindowCover073
+    4300024: WindowCover076
+    4300026: WindowCover075
+    4300028: House007
+    4300030: House008
+    4300032: WindowCover070
+    4300034: WindowCover069
+    4300036: WindowCover081
+    4300038: WindowCover082
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _13 - Default
+    second: {fileID: 2100000, guid: 92b56efa698d7ba4b997722684bc51df, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

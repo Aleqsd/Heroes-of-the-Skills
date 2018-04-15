@@ -1,0 +1,145 @@
+fileFormatVersion: 2
+guid: 0e518ee62f3393845a60dcaa624a7691
+timeCreated: 1508238651
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Group553
+    100002: House3
+    100004: //RootNode
+    100006: Object032
+    100008: Object033
+    100010: Sign
+    100012: WindowCover
+    100014: WindowCover251
+    100016: WindowCover252
+    100018: WindowCover_ncl1_1
+    100020: WindowCover_ncl1_2
+    100022: WindowCover_ncl1_3
+    400000: Group553
+    400002: House3
+    400004: //RootNode
+    400006: Object032
+    400008: Object033
+    400010: Sign
+    400012: WindowCover
+    400014: WindowCover251
+    400016: WindowCover252
+    400018: WindowCover_ncl1_1
+    400020: WindowCover_ncl1_2
+    400022: WindowCover_ncl1_3
+    2300000: House3
+    2300002: Object032
+    2300004: Object033
+    2300006: Sign
+    2300008: WindowCover
+    2300010: WindowCover251
+    2300012: WindowCover252
+    2300014: WindowCover_ncl1_1
+    2300016: WindowCover_ncl1_2
+    2300018: WindowCover_ncl1_3
+    3300000: House3
+    3300002: Object032
+    3300004: Object033
+    3300006: Sign
+    3300008: WindowCover
+    3300010: WindowCover251
+    3300012: WindowCover252
+    3300014: WindowCover_ncl1_1
+    3300016: WindowCover_ncl1_2
+    3300018: WindowCover_ncl1_3
+    4300000: WindowCover252
+    4300002: WindowCover251
+    4300004: WindowCover
+    4300006: Object032
+    4300008: Object033
+    4300010: WindowCover_ncl1_1
+    4300012: House3
+    4300014: WindowCover_ncl1_2
+    4300016: WindowCover_ncl1_3
+    4300018: Sign
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _13 - Default
+    second: {fileID: 2100000, guid: 92b56efa698d7ba4b997722684bc51df, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

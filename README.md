@@ -1,12 +1,14 @@
 # Heroes of the Skills
 
+![Screenshot](Screenshots/View.png?raw=true "Screenshot")
+
 ## Introduction
 
 Une armée de monstres souhaite détruire le Nexus. Pour les en empêcher, quatre héros légendaires s’allient et défendent le fort jusqu’à leur dernier souffle.
 
 ## TeamSkills
 
-![Alt text](Doc/Team.png?raw=true "TeamSkills")
+![TeamSkills](Doc/Team.png?raw=true "TeamSkills")
 
 ## Description
 
@@ -38,5 +40,5 @@ A implanter :
 
 ## Game loop
 
-![Alt text](Doc/GameLoop.png?raw=true "Game loop structure")
+![Diagram](Doc/GameLoop.png?raw=true "Game loop structure")
 

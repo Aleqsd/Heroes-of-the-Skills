@@ -1960,6 +1960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainSpell: {fileID: 1187347412170472, guid: 71baa40b02986004780a55ec245b35a4, type: 2}
+  spells: []
   specialBulletPrefab: {fileID: 1428294211895652, guid: d33784dfd7009274dad3376a7830b355,
     type: 2}
   bulletSpawn: {fileID: 4436912433557010}

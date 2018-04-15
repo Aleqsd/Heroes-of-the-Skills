@@ -207,7 +207,7 @@ namespace Heroes
             countAi = 0;
             roundNumber = 0;
 
-            messageText.text = "Waiting more players ...";
+            messageText.text = "Waiting more players or press Space to play solo";
 
 
             // Wait other players

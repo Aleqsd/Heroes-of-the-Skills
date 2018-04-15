@@ -41,7 +41,22 @@ public class PlayerController : NetworkBehaviour
         transform.Rotate(0, x, 0);
         transform.Translate(0, 0, z);
 
-		//Espace
+        if (Input.GetKeyDown(KeyCode.A) && spells[0] != null)
+        {
+            CmdSpell(0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Z) && spells[1] != null)
+        {
+            CmdSpell(1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && spells[2] != null)
+        {
+            CmdSpell(2);
+        }
+
+        //Espace
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             anim.SetTrigger("Attack1Trigger");
@@ -58,7 +73,7 @@ public class PlayerController : NetworkBehaviour
 			Debug.Log("Firing once every 10s");
 		}
         
-        if (Input.GetKeyDown(KeyCode.A) && spells.Length > 0)
+        if (Input.GetKeyDown(KeyCode.T) && spells.Length > 0)
         {
             CmdChangeForm();
         }
@@ -114,6 +129,23 @@ public class PlayerController : NetworkBehaviour
             transform.rotation);
 
         spellInstance.transform.parent = gameObject.transform;
+
+        // Spawn the spellInstance on the Clients
+        NetworkServer.Spawn(spellInstance);
+    }
+
+    // This [Command] code is called on the Client …
+    // … but it is run on the Server!
+    [Command]
+    void CmdSpell(int spell)
+    {
+
+
+        GameObject spellInstance = (GameObject)Instantiate(
+            spells[spell],
+            transform.position,
+            transform.rotation);
+        
 
         // Spawn the spellInstance on the Clients
         NetworkServer.Spawn(spellInstance);

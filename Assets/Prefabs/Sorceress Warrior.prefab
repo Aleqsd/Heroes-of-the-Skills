@@ -2455,10 +2455,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainSpell: {fileID: 1844191813266838, guid: a7500edcf7228cf41864743fd81bd301, type: 2}
   spells:
-  - {fileID: 1073268168604084, guid: cf4aa7212e10c9f4997d02e8216c8eca, type: 2}
-  - {fileID: 1073268168604084, guid: cf4aa7212e10c9f4997d02e8216c8eca, type: 2}
-  - {fileID: 1073268168604084, guid: cf4aa7212e10c9f4997d02e8216c8eca, type: 2}
-  - {fileID: 1073268168604084, guid: cf4aa7212e10c9f4997d02e8216c8eca, type: 2}
+  - {fileID: 1545806602296978, guid: 1fbd9b41111a0ca489725bb39370fa04, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 1073268168604084, guid: cf4aa7212e10c9f4997d02e8216c8eca, type: 2}
   specialBulletPrefab: {fileID: 1970601040429072, guid: fbc9e1435fccc4b5eb121073933e774c,
     type: 2}

@@ -8,9 +8,15 @@ Graphisme :
   Travailler l'UI
   
 Classes et effets:
-  Gérer côté ténébre / light sorciere
+  Gérer côté ténébre / light sorciere (à moitié fait)
   Penser à des attaques spéciales
   Utiliser les effects (Cartoon FX Free)
+  Création d'un overlay pour les joueurs (spells à la LoL ? map, team ...)
   
 GDD :
   Préremplir le GDD
+  
+Erreurs à fix :
+  Animations d'attaque jouent 2 fois ?
+  Texte global
+  Animations mobs

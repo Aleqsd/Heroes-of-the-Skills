@@ -39,8 +39,8 @@ namespace Heroes
         public Button hostButton;
         public Button joinButton;
         public InputField ipAdress;
-        public RawImage backgroundImage;
-        public Texture[] backgroundTextures;
+        public Image backgroundImage;
+        public Sprite[] backgroundTextures;
         private int indexTexture;
         public float startDelay = 5f;             // The delay between the start of phases.
         public float endDelay = 5f;               // The delay between the end of phases.
@@ -84,15 +84,29 @@ namespace Heroes
 			player2Button.onClick.AddListener(delegate { AvatarPicker(player2Button.name); });
 			player3Button.onClick.AddListener(delegate { AvatarPicker(player3Button.name); });
             player4Button.onClick.AddListener(delegate { AvatarPicker(player4Button.name); });
+            
 
         }
 
-        void ChangeBackground()
+        public void OnElectricityHover()
         {
-            backgroundImage.texture = backgroundTextures[indexTexture];
-            indexTexture = indexTexture < backgroundTextures.Length - 1 ? indexTexture + 1 : 0;
+            backgroundImage.sprite = backgroundTextures[1];
         }
 
+        public void OnSorceressHover()
+        {
+            backgroundImage.sprite = backgroundTextures[0];
+        }
+
+        public void OnWindHover()
+        {
+            backgroundImage.sprite = backgroundTextures[3];
+        }
+
+        public void OnFireHover()
+        {
+            backgroundImage.sprite = backgroundTextures[2];
+        }
 
 
         public void StartGame()

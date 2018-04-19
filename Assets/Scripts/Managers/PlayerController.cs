@@ -6,20 +6,24 @@ public class PlayerController : NetworkBehaviour
 {
     public GameObject[] spells;
     public float[] spellCooldowns;
-    private float[] nextSpell;
+    protected float[] nextSpell;
     public Transform bulletSpawn;
     public Animator anim;
     [HideInInspector] public Health health;
 
-    private void Start()
+    protected void Start()
     {
         anim = GetComponent<Animator>();
 
         nextSpell = new float[spellCooldowns.Length];
+
+        PlayerPrefs.SetInt("form", 0); // Start with light form
     }
 
     void Update()
     {
+        
+
         if (!isLocalPlayer)
         {
             this.transform.GetChild(0).GetComponent<Camera>().enabled = false;
@@ -42,8 +46,12 @@ public class PlayerController : NetworkBehaviour
         transform.Rotate(0, x, 0);
         transform.Translate(0, 0, z);
 
-        
-        
+        SpellInput();
+
+    }
+
+    protected virtual void SpellInput()
+    {
         if (Input.GetKeyDown(KeyCode.Mouse0) && spells[0] != null && Time.time > nextSpell[0])
         {
             nextSpell[0] = Time.time + spellCooldowns[0];
@@ -85,16 +93,13 @@ public class PlayerController : NetworkBehaviour
             nextSpell[6] = Time.time + spellCooldowns[6];
             CmdSpell(6);
         }
-
-
-
     }
 
 
     // This [Command] code is called on the Client …
     // … but it is run on the Server!
     [Command]
-    void CmdSpell(int spell)
+    protected void CmdSpell(int spell)
     {
         
 

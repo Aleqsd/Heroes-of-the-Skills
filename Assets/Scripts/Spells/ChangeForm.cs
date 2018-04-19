@@ -15,7 +15,8 @@ namespace Heroes
         void Start()
         {
             // Destroy the spell after x seconds
-            transform.position = Vector3.zero;
+            transform.position = FindObjectOfType<SorceressController>().transform.position;
+            transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
             transform.parent = FindObjectOfType<SorceressController>().transform;
 
 

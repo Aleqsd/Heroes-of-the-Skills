@@ -2414,17 +2414,17 @@ MonoBehaviour:
   - {fileID: 1844191813266838, guid: a7500edcf7228cf41864743fd81bd301, type: 2}
   - {fileID: 1073268168604084, guid: cf4aa7212e10c9f4997d02e8216c8eca, type: 2}
   - {fileID: 1545806602296978, guid: 1fbd9b41111a0ca489725bb39370fa04, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
   spellCooldowns:
   - 2
   - 5
   - 5
-  - 0
-  - 0
   bulletSpawn: {fileID: 4973056701168446}
   anim: {fileID: 9590292}
   health: {fileID: 0}
+  darkSpells:
+  - {fileID: 100004, guid: 023d59d55cde0164cbd39a9a4c3316cf, type: 2}
+  darkSpellCooldowns:
+  - 2
 --- !u!114 &114259406822703986
 MonoBehaviour:
   m_ObjectHideFlags: 1

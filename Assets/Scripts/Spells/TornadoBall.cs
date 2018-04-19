@@ -8,7 +8,7 @@ namespace Heroes
     {
         private void Start()
         {
-
+            gameObject.GetComponent<Rigidbody>().velocity = gameObject.transform.forward * 20;
             // Destroy the bullet after 5 seconds
             Destroy(gameObject, 5.0f);
         }

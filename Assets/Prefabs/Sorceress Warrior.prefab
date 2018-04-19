@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 114839232564409806}
   - component: {fileID: 114672294154568868}
   - component: {fileID: 114632443191459456}
-  - component: {fileID: 114515838138024210}
+  - component: {fileID: 114098548499390146}
   - component: {fileID: 136309325318596288}
   - component: {fileID: 114758148874991612}
   m_Layer: 9
@@ -2399,6 +2399,32 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &114098548499390146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d1abbaeadaa10b47bab4433dbad6fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spells:
+  - {fileID: 1844191813266838, guid: a7500edcf7228cf41864743fd81bd301, type: 2}
+  - {fileID: 1073268168604084, guid: cf4aa7212e10c9f4997d02e8216c8eca, type: 2}
+  - {fileID: 1545806602296978, guid: 1fbd9b41111a0ca489725bb39370fa04, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  spellCooldowns:
+  - 2
+  - 5
+  - 5
+  - 0
+  - 0
+  bulletSpawn: {fileID: 4973056701168446}
+  anim: {fileID: 9590292}
+  health: {fileID: 0}
 --- !u!114 &114259406822703986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2442,30 +2468,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &114515838138024210
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c0351f5e9974624cae057d1eb5d280e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainSpell: {fileID: 1844191813266838, guid: a7500edcf7228cf41864743fd81bd301, type: 2}
-  spells:
-  - {fileID: 1545806602296978, guid: 1fbd9b41111a0ca489725bb39370fa04, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 1073268168604084, guid: cf4aa7212e10c9f4997d02e8216c8eca, type: 2}
-  specialBulletPrefab: {fileID: 1970601040429072, guid: fbc9e1435fccc4b5eb121073933e774c,
-    type: 2}
-  bulletSpawn: {fileID: 4973056701168446}
-  anim: {fileID: 9590292}
-  specialFireRate: 10
-  health: {fileID: 0}
 --- !u!114 &114632443191459456
 MonoBehaviour:
   m_ObjectHideFlags: 1

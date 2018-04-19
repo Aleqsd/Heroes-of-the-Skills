@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 136437623862790462}
   - component: {fileID: 114826794972474252}
   - component: {fileID: 114632950882833930}
-  - component: {fileID: 114053148660401014}
+  - component: {fileID: 114591522833584426}
   - component: {fileID: 114514926961498996}
   - component: {fileID: 54030824790557342}
   m_Layer: 9
@@ -1948,24 +1948,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114053148660401014
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c0351f5e9974624cae057d1eb5d280e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainSpell: {fileID: 100004, guid: 023d59d55cde0164cbd39a9a4c3316cf, type: 2}
-  specialBulletPrefab: {fileID: 1428294211895652, guid: d33784dfd7009274dad3376a7830b355,
-    type: 2}
-  bulletSpawn: {fileID: 4436912433557010}
-  anim: {fileID: 9590292}
-  specialFireRate: 10
-  health: {fileID: 0}
 --- !u!114 &114391654948630360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2054,6 +2036,24 @@ MonoBehaviour:
   param3: 
   param4: 
   param5: 
+--- !u!114 &114591522833584426
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f15c18e94eedf0e4d93ddb5ad5b20355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spells:
+  - {fileID: 100004, guid: 023d59d55cde0164cbd39a9a4c3316cf, type: 2}
+  spellCooldowns:
+  - 2
+  bulletSpawn: {fileID: 4436912433557010}
+  anim: {fileID: 9590292}
+  health: {fileID: 0}
 --- !u!114 &114632950882833930
 MonoBehaviour:
   m_ObjectHideFlags: 1

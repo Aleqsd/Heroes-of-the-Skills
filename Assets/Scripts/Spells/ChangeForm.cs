@@ -15,7 +15,10 @@ namespace Heroes
         void Start()
         {
             // Destroy the spell after x seconds
-            
+            transform.position = Vector3.zero;
+            transform.parent = FindObjectOfType<SorceressController>().transform;
+
+
             Destroy(gameObject, 3.0f);
             if (PlayerPrefs.GetInt("form") == 1)
             {

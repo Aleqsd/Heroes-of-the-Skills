@@ -6,7 +6,7 @@ public class HealBall : MonoBehaviour {
 
     private void Start()
     {
-
+        gameObject.GetComponent<Rigidbody>().velocity = gameObject.transform.forward * 10;
         // Destroy the bullet after 5 seconds
         Destroy(gameObject, 5.0f);
     }

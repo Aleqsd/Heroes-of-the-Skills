@@ -80,6 +80,7 @@ namespace Heroes
 
             messageCanvas.SetActive(true);
             
+            
             player1Button.onClick.AddListener(delegate { AvatarPicker(player1Button.name); });
 			player2Button.onClick.AddListener(delegate { AvatarPicker(player2Button.name); });
 			player3Button.onClick.AddListener(delegate { AvatarPicker(player3Button.name); });
@@ -117,7 +118,7 @@ namespace Heroes
             //Destroy(joinButton.gameObject); // TODO : just hide button
             //Destroy(ipAdress.gameObject);
             //CancelInvoke("ChangeBackground");
-            //backgroundImage.enabled = false;
+            backgroundImage.enabled = false;
             Destroy(GetComponent<AudioListener>()); // During start screen there is no cameras because it's attached to the character
                                                     // that didn't spawn yet, so we need an audio listener on game manager to
                                                     // hear start music
@@ -393,6 +394,7 @@ namespace Heroes
         public override void OnClientConnect(NetworkConnection conn)
         {
             messageCanvas.SetActive(false);
+            backgroundImage.enabled = false;
 
             IntegerMessage msg = new IntegerMessage(avatarIndex);
 

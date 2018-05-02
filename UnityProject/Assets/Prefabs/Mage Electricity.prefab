@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 114826794972474252}
   - component: {fileID: 114632950882833930}
   - component: {fileID: 114514926961498996}
-  - component: {fileID: 54030824790557342}
   - component: {fileID: 114822594749875734}
+  - component: {fileID: 54328953459619562}
   m_Layer: 9
   m_Name: Mage Electricity
   m_TagString: Player
@@ -1933,7 +1933,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!54 &54030824790557342
+--- !u!54 &54328953459619562
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2047,7 +2047,7 @@ MonoBehaviour:
   m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TransformSyncMode: 3
+  m_TransformSyncMode: 1
   m_SendInterval: 0.033333335
   m_SyncRotationAxis: 7
   m_RotationSyncCompression: 0

@@ -16,7 +16,7 @@ namespace Heroes
 
         private void ReachPosition(StateController controller)
         {
-            controller.botMovement.Move(Vector3.zero);
+            controller.botMovement.Move(new Vector3(0,0,0));
         }
     }
 }

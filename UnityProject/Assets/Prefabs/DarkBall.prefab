@@ -42,9 +42,9 @@ GameObject:
   - component: {fileID: 114360178787339962}
   - component: {fileID: 135263895402517986}
   - component: {fileID: 54713908692782494}
-  - component: {fileID: 114289219404272748}
   - component: {fileID: 114574956550725776}
   - component: {fileID: 82005416086259268}
+  - component: {fileID: 114716659675762604}
   m_Layer: 12
   m_Name: DarkBall
   m_TagString: Untagged
@@ -205,17 +205,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114289219404272748
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1789115479404046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 295f85523daa1ca41819072840792647, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114360178787339962
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -282,6 +271,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotation: {x: 90, y: 0, z: 0}
   space: 1
+--- !u!114 &114716659675762604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1789115479404046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8024d01b8322847479ff7893846aa699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135263895402517986
 SphereCollider:
   m_ObjectHideFlags: 1

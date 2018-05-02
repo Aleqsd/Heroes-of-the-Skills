@@ -28,6 +28,7 @@ namespace Heroes
         private List<GameObject> players;
         private GameObject nexus;
         public GameObject[] aiPrefabs;                   // prefabs
+        public GameObject[] spawnPoints;
         public AudioSource gameAudio;                   // The audio source to play.
         public AudioClip[] ambients;                      // Ambient audio
         [HideInInspector] public List<AiManager> bots;     // A collection of managers for enabling and disabling different aspects of the bots.
@@ -139,29 +140,6 @@ namespace Heroes
 
             NetworkManager.singleton.StartClient();
         }
-
-
-        void PlayRandomAmbient()
-        {
-            gameAudio.clip = ambients[Random.Range(0, ambients.Length)];
-            gameAudio.Play();
-            Invoke("PlayRandomAmbient", gameAudio.clip.length);
-        }
-
-        /*
-         * This function is used to calculate random points in a circle
-         */
-        Vector3 RandomCircle(Vector3 center, float radius)
-        {
-            float ang = Random.value * 360;
-            Vector3 pos;
-            pos.x = center.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
-            pos.y = 0;
-            pos.z = center.z + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
-            return pos;
-        }
-
-
 
         
         // This is called from start and will run each phase of the game one after another.
@@ -328,26 +306,53 @@ namespace Heroes
             return players.Count == 0 || !nexus || victory;
         }
 
+
+        void PlayRandomAmbient()
+        {
+            gameAudio.clip = ambients[Random.Range(0, ambients.Length)];
+            gameAudio.Play();
+            Invoke("PlayRandomAmbient", gameAudio.clip.length);
+        }
+
+        /*
+         * This function is used to calculate random points in a circle
+         */
+        Vector3 RandomCircle(Vector3 center, float radius)
+        {
+            float ang = Random.value * 360;
+            Vector3 pos;
+            pos.x = center.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
+            pos.y = 0;
+            pos.z = center.z + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
+            return pos;
+        }
+
         /**
          * This function is used to spawn all AIs in a random circle around 0,0,0.
          * The spawning doesn't stop until all AIs has spawned
          */
         public IEnumerator SpawnAllAi()
         {
-
-            if (countAi < totalAi)
-            {
-
-                AiManager bot = new AiManager
+            foreach(var spawnPoint in spawnPoints){
+                if (countAi < totalAi)
                 {
-                    instance = Instantiate(aiPrefabs[Random.Range(0, aiPrefabs.Length)], RandomCircle(Vector3.zero, Random.Range(30, 60)), new Quaternion(0, 0, 0, 0)) as GameObject
-                };
-                bot.SetupAI();
-                bots.Add(bot);
-                NetworkServer.Spawn(bot.instance);
-                countAi++;
-                yield return spawnWait;
+                    Vector3 tmp = spawnPoint.transform.position;
+                    tmp.y += 1;
+
+                    AiManager bot = new AiManager
+                    {
+                        instance = Instantiate(aiPrefabs[Random.Range(0, aiPrefabs.Length)], tmp, new Quaternion(0, 0, 0, 0)) as GameObject
+                    };
+
+                    bot.SetupAI();
+                    bots.Add(bot);
+                    NetworkServer.Spawn(bot.instance);
+                    countAi++;
+                    
+                }
             }
+            yield return spawnWait;
+
 
         }
 

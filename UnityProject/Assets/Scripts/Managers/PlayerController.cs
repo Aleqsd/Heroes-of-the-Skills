@@ -22,7 +22,22 @@ public class PlayerController : NetworkBehaviour
 
     void Update()
     {
-        
+
+        RaycastHit hit;
+        float heightAboveGround = 0;
+
+        Vector3 pos = transform.position;
+        // Debug.Log("map : " + map.GetComponent<Collider>().bounds.size);
+
+        if (Physics.Raycast(pos, transform.TransformDirection(Vector3.down), out hit, Mathf.Infinity))
+        {
+            heightAboveGround = hit.distance;
+            // Debug.Log("Height : " + heightAboveGround);
+        }
+
+        pos.y -= heightAboveGround - 0.1f;
+
+        transform.position = pos;
 
         if (!isLocalPlayer)
         {

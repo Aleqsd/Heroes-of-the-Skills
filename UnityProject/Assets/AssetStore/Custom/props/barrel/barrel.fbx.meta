@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: 74c047decc9eb684999fc74746c18ac0
+timeCreated: 1525425681
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: details
+    100004: details_1
+    100006: details_2
+    100008: details_3
+    100010: plank_barrel_0
+    100012: plank_barrel_1
+    100014: plank_barrel_10
+    100016: plank_barrel_11
+    100018: plank_barrel_12
+    100020: plank_barrel_13
+    100022: plank_barrel_14
+    100024: plank_barrel_2
+    100026: plank_barrel_3
+    100028: plank_barrel_4
+    100030: plank_barrel_5
+    100032: plank_barrel_6
+    100034: plank_barrel_7
+    100036: plank_barrel_8
+    100038: plank_barrel_9
+    100040: planks
+    100042: shape
+    400000: //RootNode
+    400002: details
+    400004: details_1
+    400006: details_2
+    400008: details_3
+    400010: plank_barrel_0
+    400012: plank_barrel_1
+    400014: plank_barrel_10
+    400016: plank_barrel_11
+    400018: plank_barrel_12
+    400020: plank_barrel_13
+    400022: plank_barrel_14
+    400024: plank_barrel_2
+    400026: plank_barrel_3
+    400028: plank_barrel_4
+    400030: plank_barrel_5
+    400032: plank_barrel_6
+    400034: plank_barrel_7
+    400036: plank_barrel_8
+    400038: plank_barrel_9
+    400040: planks
+    400042: shape
+    2100000: m_shape
+    2100002: m_planks
+    2100004: m_details
+    2300000: details_1
+    2300002: details_2
+    2300004: details_3
+    2300006: plank_barrel_0
+    2300008: plank_barrel_1
+    2300010: plank_barrel_10
+    2300012: plank_barrel_11
+    2300014: plank_barrel_12
+    2300016: plank_barrel_13
+    2300018: plank_barrel_14
+    2300020: plank_barrel_2
+    2300022: plank_barrel_3
+    2300024: plank_barrel_4
+    2300026: plank_barrel_5
+    2300028: plank_barrel_6
+    2300030: plank_barrel_7
+    2300032: plank_barrel_8
+    2300034: plank_barrel_9
+    2300036: shape
+    2300038: details
+    2300040: planks
+    3300000: details_1
+    3300002: details_2
+    3300004: details_3
+    3300006: plank_barrel_0
+    3300008: plank_barrel_1
+    3300010: plank_barrel_10
+    3300012: plank_barrel_11
+    3300014: plank_barrel_12
+    3300016: plank_barrel_13
+    3300018: plank_barrel_14
+    3300020: plank_barrel_2
+    3300022: plank_barrel_3
+    3300024: plank_barrel_4
+    3300026: plank_barrel_5
+    3300028: plank_barrel_6
+    3300030: plank_barrel_7
+    3300032: plank_barrel_8
+    3300034: plank_barrel_9
+    3300036: shape
+    3300038: details
+    3300040: planks
+    4300000: shape
+    4300002: plank_barrel_1
+    4300004: plank_barrel_14
+    4300006: plank_barrel_11
+    4300008: plank_barrel_9
+    4300010: plank_barrel_6
+    4300012: plank_barrel_4
+    4300014: plank_barrel_0
+    4300016: plank_barrel_2
+    4300018: plank_barrel_3
+    4300020: plank_barrel_5
+    4300022: plank_barrel_7
+    4300024: plank_barrel_8
+    4300026: plank_barrel_10
+    4300028: plank_barrel_12
+    4300030: plank_barrel_13
+    4300032: details_1
+    4300034: details_2
+    4300036: details_3
+    4300038: planks
+    4300040: details
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

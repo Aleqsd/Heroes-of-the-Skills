@@ -1,0 +1,321 @@
+fileFormatVersion: 2
+guid: 2b1696e0706ea9a478fb79c468b7afd1
+timeCreated: 1525267590
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: base
+    100004: base_0
+    100006: base_1
+    100008: base_2
+    100010: base_3
+    100012: bassin
+    100014: bassin 1
+    100016: bassin 2
+    100018: bassin 3
+    100020: bassin 4
+    100022: bassin_0
+    100024: bassin_1
+    100026: bassin_2
+    100028: bassin_3
+    100030: face_1
+    100032: face_2
+    100034: face_3
+    100036: face_4
+    100038: group1
+    100040: group1 1
+    100042: group1 2
+    100044: group1 3
+    100046: group2
+    100048: group2 1
+    100050: group2 2
+    100052: group2 3
+    100054: pCube2
+    100056: pCube2 1
+    100058: pCube2 2
+    100060: pCube2 3
+    100062: polySurface12
+    100064: polySurface12 1
+    100066: polySurface12 2
+    100068: polySurface12 3
+    100070: polySurface2
+    100072: polySurface2 1
+    100074: polySurface2 2
+    100076: polySurface2 3
+    100078: polySurface3
+    100080: polySurface3 1
+    100082: polySurface3 2
+    100084: polySurface3 3
+    100086: polySurface9
+    100088: polySurface9 1
+    100090: polySurface9 2
+    100092: polySurface9 3
+    100094: shape
+    100096: transform1
+    100098: transform1 1
+    100100: transform1 2
+    100102: transform1 3
+    100104: transform2
+    100106: transform2 1
+    100108: transform2 2
+    100110: transform2 3
+    100112: transform3
+    100114: transform3 1
+    100116: transform3 2
+    100118: transform3 3
+    100120: water
+    100122: water 1
+    100124: water 2
+    100126: water 3
+    400000: //RootNode
+    400002: base
+    400004: base_0
+    400006: base_1
+    400008: base_2
+    400010: base_3
+    400012: bassin
+    400014: bassin 1
+    400016: bassin 2
+    400018: bassin 3
+    400020: bassin 4
+    400022: bassin_0
+    400024: bassin_1
+    400026: bassin_2
+    400028: bassin_3
+    400030: face_1
+    400032: face_2
+    400034: face_3
+    400036: face_4
+    400038: group1
+    400040: group1 1
+    400042: group1 2
+    400044: group1 3
+    400046: group2
+    400048: group2 1
+    400050: group2 2
+    400052: group2 3
+    400054: pCube2
+    400056: pCube2 1
+    400058: pCube2 2
+    400060: pCube2 3
+    400062: polySurface12
+    400064: polySurface12 1
+    400066: polySurface12 2
+    400068: polySurface12 3
+    400070: polySurface2
+    400072: polySurface2 1
+    400074: polySurface2 2
+    400076: polySurface2 3
+    400078: polySurface3
+    400080: polySurface3 1
+    400082: polySurface3 2
+    400084: polySurface3 3
+    400086: polySurface9
+    400088: polySurface9 1
+    400090: polySurface9 2
+    400092: polySurface9 3
+    400094: shape
+    400096: transform1
+    400098: transform1 1
+    400100: transform1 2
+    400102: transform1 3
+    400104: transform2
+    400106: transform2 1
+    400108: transform2 2
+    400110: transform2 3
+    400112: transform3
+    400114: transform3 1
+    400116: transform3 2
+    400118: transform3 3
+    400120: water
+    400122: water 1
+    400124: water 2
+    400126: water 3
+    2100000: m_base
+    2100002: m_shape
+    2100004: m_pool
+    2100006: m_water
+    2100008: m_mouth
+    2100010: m_details
+    2300000: base_0
+    2300002: base_1
+    2300004: base_2
+    2300006: base_3
+    2300008: bassin 1
+    2300010: bassin 2
+    2300012: bassin 3
+    2300014: bassin 4
+    2300016: pCube2
+    2300018: pCube2 1
+    2300020: pCube2 2
+    2300022: pCube2 3
+    2300024: polySurface12
+    2300026: polySurface12 1
+    2300028: polySurface12 2
+    2300030: polySurface12 3
+    2300032: polySurface2
+    2300034: polySurface2 1
+    2300036: polySurface2 2
+    2300038: polySurface2 3
+    2300040: polySurface3
+    2300042: polySurface3 1
+    2300044: polySurface3 2
+    2300046: polySurface3 3
+    2300048: polySurface9
+    2300050: polySurface9 1
+    2300052: polySurface9 2
+    2300054: polySurface9 3
+    2300056: shape
+    2300058: water
+    2300060: water 1
+    2300062: water 2
+    2300064: water 3
+    3300000: base_0
+    3300002: base_1
+    3300004: base_2
+    3300006: base_3
+    3300008: bassin 1
+    3300010: bassin 2
+    3300012: bassin 3
+    3300014: bassin 4
+    3300016: pCube2
+    3300018: pCube2 1
+    3300020: pCube2 2
+    3300022: pCube2 3
+    3300024: polySurface12
+    3300026: polySurface12 1
+    3300028: polySurface12 2
+    3300030: polySurface12 3
+    3300032: polySurface2
+    3300034: polySurface2 1
+    3300036: polySurface2 2
+    3300038: polySurface2 3
+    3300040: polySurface3
+    3300042: polySurface3 1
+    3300044: polySurface3 2
+    3300046: polySurface3 3
+    3300048: polySurface9
+    3300050: polySurface9 1
+    3300052: polySurface9 2
+    3300054: polySurface9 3
+    3300056: shape
+    3300058: water
+    3300060: water 1
+    3300062: water 2
+    3300064: water 3
+    4300000: base_0
+    4300002: base_1
+    4300004: base_2
+    4300006: base_3
+    4300008: shape
+    4300010: bassin
+    4300012: water
+    4300014: bassin
+    4300016: water
+    4300018: bassin
+    4300020: water
+    4300022: bassin
+    4300024: water
+    4300026: polySurface12
+    4300028: pCube2
+    4300030: polySurface9
+    4300032: polySurface3
+    4300034: polySurface2
+    4300036: polySurface12
+    4300038: pCube2
+    4300040: polySurface9
+    4300042: polySurface3
+    4300044: polySurface2
+    4300046: polySurface12
+    4300048: pCube2
+    4300050: polySurface9
+    4300052: polySurface3
+    4300054: polySurface2
+    4300056: polySurface12
+    4300058: pCube2
+    4300060: polySurface9
+    4300062: polySurface3
+    4300064: polySurface2
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

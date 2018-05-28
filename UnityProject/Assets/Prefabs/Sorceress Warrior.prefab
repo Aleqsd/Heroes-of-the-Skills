@@ -1905,6 +1905,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!136 &13607772
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -1931,6 +1932,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 6c7601037374e0d4aaeb4f27e01bccb1, type: 2}
   m_StaticBatchInfo:
@@ -2029,6 +2031,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 6c7601037374e0d4aaeb4f27e01bccb1, type: 2}
   m_StaticBatchInfo:
@@ -2415,7 +2418,7 @@ MonoBehaviour:
   - {fileID: 1073268168604084, guid: cf4aa7212e10c9f4997d02e8216c8eca, type: 2}
   - {fileID: 1545806602296978, guid: 1fbd9b41111a0ca489725bb39370fa04, type: 2}
   spellCooldowns:
-  - 1
+  - 0.5
   - 2
   - 5
   bulletSpawn: {fileID: 4973056701168446}
@@ -2426,7 +2429,7 @@ MonoBehaviour:
   - {fileID: 1073268168604084, guid: cf4aa7212e10c9f4997d02e8216c8eca, type: 2}
   - {fileID: 100000, guid: a3239e52d160ade408278a2296416bbb, type: 2}
   darkSpellCooldowns:
-  - 1
+  - 0.5
   - 2
   - 6
 --- !u!114 &114259406822703986

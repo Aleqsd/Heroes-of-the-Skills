@@ -18,7 +18,7 @@ namespace Heroes
 
         private bool ReachedPosition(StateController controller)
         {
-            bool reachedPosition = Vector3.Distance(Vector3.zero, controller.transform.position) < 5f;
+            bool reachedPosition = Vector3.Distance(new Vector3(21.1991f, 27.03f, -1.5f), controller.transform.position) < 5f;
             
             if (reachedPosition)
             {

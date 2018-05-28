@@ -1,6 +1,6 @@
 # Heroes of the Skills
 
-![Screenshot](Screenshots/View.png?raw=true "Screenshot")
+<img src="Screenshots/View.png" width="400">
 
 ## Introduction
 
@@ -23,26 +23,36 @@ Enfin, si les héros parviennent à se débarrasser de toutes les vagues d’enn
 ## Fonctionnalités
 
 ### Jouable en Solo et Multiplayer
-(Ajouter screenshot / video)
+<img src="Screenshots/multi.png" width="400">
 ### Choix possible entre 4 classes
-#### Mage electrique
-#### Mage Feu
-#### Mage Air
-#### Sorcière
-(Ajouter screenshot / video)
-### Attaques simples et attaques spéciales
 Les touches des sorts sont clic gauche, 1, 2, 3, 4, 5 ... en fonction des sorts disponible
-(Ajouter screenshot / video)
-### FX / Particules
-(Ajouter screenshot / video)
-### Intelligence Artificielle des monstres (FSM)
-(Ajouter screenshot / video)
+#### Mage electrique
+<img src="Screenshots/elecchar.png" width="200"> <img src="Screenshots/elecauto.png" width="200">
+#### Mage Feu
+<img src="Screenshots/firechar.png" width="200"> <img src="Screenshots/fireauto.png" width="200">
+#### Mage Air
+<img src="Screenshots/windchar.png" width="200"> <img src="Screenshots/windauto.png" width="200">
+#### Sorcière
+La sorcière possède deux formes, une pour soigner, l'autre pour infliger des dégats.
+<img src="Screenshots/sorcchar.png" width="200">
+##### Light form
+<img src="Screenshots/sorclightauto.png" width="200"><img src="Screenshots/sorclightform.png" width="200"> <img src="Screenshots/sorclight2.png" width="200">
+##### Dark form
+<img src="Screenshots/sorcdarkauto.png" width="200"><img src="Screenshots/sorcdarkform.png" width="200"> <img src="Screenshots/sorcdark2.png" width="200">
+
+### Intelligence Artificielle des monstres
+L'IA des monstres a été implémentée grâce à une machine d'état ou Finite State Machine (FSM)
+Les monstres se dirigent en direction du Nexus, s'ils rencontrent un ennemi, ils l'attaquent, s'ils arrivent à destination, ils attaquent le Nexus.
+<img src="Screenshots/survivalbehaviour.png" width="200"><img src="Screenshots/attacknexus.png" width="200"> <img src="Screenshots/chase.png" width="200">
+
+
 ### Boucle de jeu
 
 ![Diagram](Doc/GameLoop.png?raw=true "Game loop structure")
 
 ### A implémenter :
 
+- Fix navmeshagent
 - Evolution des spells après les rounds
 - Fix d'animations en multi
 - Optimisation de latence multi

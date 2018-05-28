@@ -1631,6 +1631,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!137 &13726158
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1644,6 +1645,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 12e0ad5d149269340829111a92c559ab, type: 2}
   m_StaticBatchInfo:
@@ -1742,6 +1744,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 12e0ad5d149269340829111a92c559ab, type: 2}
   m_StaticBatchInfo:
@@ -2125,7 +2128,7 @@ MonoBehaviour:
   spells:
   - {fileID: 1187347412170472, guid: 71baa40b02986004780a55ec245b35a4, type: 2}
   spellCooldowns:
-  - 2
+  - 0.5
   bulletSpawn: {fileID: 4436912433557010}
   anim: {fileID: 9590292}
   health: {fileID: 0}

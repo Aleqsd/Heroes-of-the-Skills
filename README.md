@@ -1,7 +1,7 @@
 # Heroes of the Skills
 
-<img src="Screenshots/view.png" width="400"><img src="Screenshots/view2.png" width="400">
-<img src="Screenshots/view3.png" width="400"><img src="Screenshots/view4.png" width="400">
+<img src="Screenshots/view.png" width="300"><img src="Screenshots/view2.png" width="300">
+<img src="Screenshots/view3.png" width="300"><img src="Screenshots/view4.png" width="300">
 
 ## Introduction
 

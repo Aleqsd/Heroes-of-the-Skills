@@ -24,9 +24,14 @@ Enfin, si les héros parviennent à se débarrasser de toutes les vagues d’enn
 
 ### Jouable en Solo et Multiplayer
 (Ajouter screenshot / video)
-### Choix possible entre 4 classes (Electricité / Feu / Air / Soins)
+### Choix possible entre 4 classes
+#### Mage electrique
+#### Mage Feu
+#### Mage Air
+#### Sorcière
 (Ajouter screenshot / video)
 ### Attaques simples et attaques spéciales
+Les touches des sorts sont clic gauche, 1, 2, 3, 4, 5 ... en fonction des sorts disponible
 (Ajouter screenshot / video)
 ### FX / Particules
 (Ajouter screenshot / video)

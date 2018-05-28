@@ -26,15 +26,14 @@ Enfin, si les héros parviennent à se débarrasser de toutes les vagues d’enn
 - Choix possible entre 4 classes (Electricité / Feu / Air / Soins)
 - Attaques simples et attaques spéciales
 - Spawn de monstres
-- Intelligence Artificielle des monstres
-- Système de round
+- Intelligence Artificielle des monstres (FSM)
+- Système de rounds
 - Boucle de jeu
 - FX / Particules
 
-A implanter :
+A implémenter :
 
 - Evolution des spells après les rounds
-- Map / UI
 - Fix d'animations en multi
 - Optimisation de latence multi
 

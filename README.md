@@ -22,22 +22,23 @@ Enfin, si les héros parviennent à se débarrasser de toutes les vagues d’enn
 
 ## Fonctionnalités
 
-- Jouable en Solo et Multiplayer
-- Choix possible entre 4 classes (Electricité / Feu / Air / Soins)
-- Attaques simples et attaques spéciales
-- Spawn de monstres
-- Intelligence Artificielle des monstres (FSM)
-- Système de rounds
-- Boucle de jeu
-- FX / Particules
+### Jouable en Solo et Multiplayer
+(Ajouter screenshot / video)
+### Choix possible entre 4 classes (Electricité / Feu / Air / Soins)
+(Ajouter screenshot / video)
+### Attaques simples et attaques spéciales
+(Ajouter screenshot / video)
+### FX / Particules
+(Ajouter screenshot / video)
+### Intelligence Artificielle des monstres (FSM)
+(Ajouter screenshot / video)
+### Boucle de jeu
 
-A implémenter :
+![Diagram](Doc/GameLoop.png?raw=true "Game loop structure")
+
+### A implémenter :
 
 - Evolution des spells après les rounds
 - Fix d'animations en multi
 - Optimisation de latence multi
-
-## Game loop
-
-![Diagram](Doc/GameLoop.png?raw=true "Game loop structure")
 

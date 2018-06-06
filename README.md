@@ -28,14 +28,13 @@ Enfin, si les héros parviennent à se débarrasser de toutes les vagues d’enn
 ### Choix possible entre 4 classes
 Les touches des sorts sont clic gauche, 1, 2, 3, 4, 5 ... en fonction des sorts disponible
 Electrique
-<img src="Screenshots/elecchar.png" width="100"> <img src="Screenshots/elecauto.png" width="100">
+<img src="Screenshots/elecauto.png" width="100">
 Feu
-<img src="Screenshots/firechar.png" width="100"> <img src="Screenshots/fireauto.png" width="100">
+<img src="Screenshots/fireauto.png" width="100">
 Air
-<img src="Screenshots/windchar.png" width="100"> <img src="Screenshots/windauto.png" width="100">
+<img src="Screenshots/windauto.png" width="100">
 Sorcière
 La sorcière possède deux formes, une pour soigner, l'autre pour infliger des dégats.
-<img src="Screenshots/sorcchar.png" width="100">
 Forme lumière
 <img src="Screenshots/sorclightauto.png" width="100"><img src="Screenshots/sorclightform.png" width="100"> <img src="Screenshots/sorclight2.png" width="100">
 Forme ténèbre
